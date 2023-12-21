@@ -33,7 +33,7 @@ import lombok.ToString;
 public class OptionSet extends BaseEntity {
 	//옵션들을 가지고 프로덕트를 FK로 참조하는 옵션셋
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;//pk
 	
 	private Integer totalPrice;
