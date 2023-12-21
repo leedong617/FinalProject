@@ -33,7 +33,7 @@ import lombok.ToString;
 @NoArgsConstructor
 public class Product extends BaseEntity {//제품의 기본 모델 정보
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;//pk
 	private String name;//제품명
 	private String brand;//브랜드
