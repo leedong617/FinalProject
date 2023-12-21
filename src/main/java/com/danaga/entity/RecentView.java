@@ -30,7 +30,7 @@ public class RecentView extends BaseEntity{//멤버아이디와 프로덕트아�
 	//최근 조회한 상품 
 	//30일간만 보관 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@ManyToOne
 	@JoinColumn(name = "memberId")
