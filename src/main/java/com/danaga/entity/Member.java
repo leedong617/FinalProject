@@ -36,8 +36,7 @@ import lombok.ToString;
 public class Member {
 
 	@Id
-	@SequenceGenerator(name = "member_member_no_seq", sequenceName = "member_member_no_seq", initialValue = 1, allocationSize = 1)
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "member_member_no_seq")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@Column(unique = true)
 	private String userName;
