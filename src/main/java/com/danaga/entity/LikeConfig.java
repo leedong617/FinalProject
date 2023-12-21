@@ -33,8 +33,7 @@ import lombok.ToString;
 @Data
 public class LikeConfig {
     @Id
-    @SequenceGenerator(name = "like_config_id_seq", sequenceName = "like_config_id_seq", initialValue = 1, allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "like_config_id_seq") 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ColumnDefault(value = "0")
