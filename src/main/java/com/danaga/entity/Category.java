@@ -28,7 +28,7 @@ import lombok.ToString;
 @Entity
 public class Category {//셀프 참조하는 오너테이블, 카테고리셋과는 종속테이블
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE) 
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id; //pk
 	private String name; //카테고리 이름
 	
