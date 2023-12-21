@@ -28,7 +28,7 @@ import lombok.ToString;
 public class CategorySet {//중간테이블, 오너테이블
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE) 
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id; //pk
 	
 	@JoinColumn(name="categoryId")
