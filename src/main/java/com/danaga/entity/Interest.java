@@ -26,8 +26,7 @@ import lombok.ToString;
 public class Interest extends BaseEntity{//관심상품
 //유저와 옵션셋을 이어주는 중간테이블
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	private Long id;//pk
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
 	@JoinColumn(name = "memberId")
 	@ManyToOne
