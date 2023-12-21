@@ -33,13 +33,6 @@ public class KaKaoController {
 	
 	@Value("${api.kakao.redirect_url}")
 	private String redirect_url;
-	/*
-    kakao_main.html 페이지보여주기
-    */
-	@GetMapping("/kakao_main")
-	public String kakao_main() {
-		return "kakao_main";
-	}
 	
 	/*
     - redirection url로 등록된 요청
@@ -89,50 +82,6 @@ public class KaKaoController {
 		}
 		return "redirect:/index";
 	}
-	
-//	@RequestMapping(value = "/kakao_login_action")
-//	public String kakao_login_action(@RequestParam(value = "code", required = false) String code, Model model,
-//			HttpSession session) throws Exception {
-//		JSONObject tokenObject= kakaoService.getToken(code);
-//		String authorize_access_token=(String)tokenObject.get("access_token");
-//   		
-//		KakaoProfile kakaoProfile = kakaoService.getKakaoProfile(authorize_access_token);
-//		
-//		if(kakaoProfile.getKakao_account().getEmail() != null) {
-//			session.setAttribute("sUserId", kakaoProfile.getKakao_account().getEmail());
-//		}
-//		
-//   		System.out.println("************************************");
-//   		System.out.println("<<< 이미가입한사용자라면 로그인진행 >>>");
-//   		System.out.println("<<< 미가입사용자라면 회원가입진행   >>>");
-//   		System.out.println("카카오 아이디(번호) : " + kakaoProfile.getId());
-//		System.out.println("카카오 이메일 : " + kakaoProfile.getKakao_account().getEmail());
-//		System.out.println("카카오 닉네임 : " + kakaoProfile.getKakao_account().getProfile().getNickname());
-//   		System.out.println("************************************");
-//   		/*
-//          * 이미가입한사용자라면 로그인진행
-//          * 미가입사용자라면 회원가입진행
-//          */
-//		/*
-//		create table kakao_table (
-//		   k_number bigint auto_increment,
-//		   k_name varchar(20) not null,
-//		   k_email varchar(50) not null,
-//		   constraint primary key(k_number)
-//		 );
-//		 
-//		-----------------------------------------
-//		user_id | platform_type | 		email
-//		-----------------------------------------
-//		0001    |   kakao1      | test@gmail.com
-//		0012    |   google      | test@gmail.com
-//		0023    |   facebook    | test@gmail.com
-//		5300    |   kakao2      | test01@gmail.com
-//		*/
-//   		
-//       
-//		return "index";
-//	}	
 	
 	
 }
