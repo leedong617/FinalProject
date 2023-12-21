@@ -20,7 +20,7 @@ import lombok.ToString;
 @Data
 public class Options {//옵션셋FK를 가지는 오너테이블
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;//pk
 	
 	private String name; //옵션명
