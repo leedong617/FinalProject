@@ -24,7 +24,7 @@ import lombok.ToString;
 @Data
 public class BoardGroup {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 
