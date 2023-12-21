@@ -344,12 +344,12 @@ public class StatisticServiceImpl implements StatisticService {
 	*
 	*
 	*/
-	// 탈퇴회원 9999화
+	// 탈퇴회원 1화
 	public void secession() {
 		List<Orders> orders = orderRepository.findByMemberIdIsNull();
 		for (Orders order : orders) {
 			if (order.getMember() == null) {
-				order.setMember(memberRepository.findById(999999999999999999L).get());
+				order.setMember(memberRepository.findById(1L).get());
 			}
 		}
 		return;
