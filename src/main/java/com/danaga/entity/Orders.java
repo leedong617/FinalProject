@@ -44,8 +44,7 @@ import lombok.*;
 public class Orders {
 	
 	@Id
-	@SequenceGenerator(name = "order_order_no_seq",sequenceName = "order_order_no_seq",initialValue = 1,allocationSize = 1)
-	@GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "order_order_no_seq")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(length = 20)
 	private Long id; 
 
