@@ -39,8 +39,7 @@ import lombok.ToString;
 @Data
 public class Board extends BaseEntity {
 	@Id
-	@SequenceGenerator(name = "board_id_seq", sequenceName = "board_id_seq", initialValue = 1, allocationSize = 1)
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	@Column(nullable=false)
