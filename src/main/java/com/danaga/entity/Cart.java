@@ -26,8 +26,7 @@ import lombok.ToString;
 @EqualsAndHashCode(callSuper = true)
 public class Cart extends BaseEntity {
 	@Id
-	@SequenceGenerator(name = "cart_cart_no_seq", sequenceName = "cart_cart_no_seq", initialValue = 1, allocationSize = 1)
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	private Integer qty;
