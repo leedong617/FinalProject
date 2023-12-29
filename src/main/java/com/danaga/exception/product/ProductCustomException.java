@@ -1,8 +1,10 @@
 package com.danaga.exception.product;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 @Data
+@EqualsAndHashCode(callSuper = false)
 public class ProductCustomException extends Exception{
 	private String data;
 	private ProductExceptionMsg msg;
