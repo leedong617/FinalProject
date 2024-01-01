@@ -41,19 +41,12 @@ public class KaKaoController {
      */
 	@GetMapping("/kakao_login_action")
 	public String kakao_login_action(String code, HttpSession session) throws Exception {
+		
 		OAuthToken accessToken = kaKaoService.getToken(code);
 		KakaoProfile kakaoProfile = kaKaoService.getKakaoProfile(accessToken);
 	    
-	    String kakaoUserName = "Kakao"+kakaoProfile.getId();
-	    String garbagePasswordStr = UUID.randomUUID()+"";
 	    String kakaoUserEmail = kakaoProfile.getKakao_account().getEmail();
 	    
-	    String birthday = kakaoProfile.getKakao_account().getBirthday();
-	    String month = birthday.substring(0, 2);
-        String day = birthday.substring(2);
-	    String dateString = kakaoProfile.getKakao_account().getBirthyear()+"-"+month+"-"+day; // 예시 문자열 날짜
-        String pattern = "yyyy-MM-dd";
-        SimpleDateFormat sdf = new SimpleDateFormat(pattern);
 	    try {
 	    	MemberResponseDto originMember = memberService.getMemberBy(kakaoUserEmail);
 			session.setAttribute("sUserId", originMember.getEmail());
@@ -61,6 +54,16 @@ public class KaKaoController {
 			
 		} catch (MemberNotFoundException e) {
 			try {
+				String kakaoUserName = "Kakao"+kakaoProfile.getId();
+			    String garbagePasswordStr = UUID.randomUUID()+"";
+			    
+				String birthday = kakaoProfile.getKakao_account().getBirthday();
+			    String month = birthday.substring(0, 2);
+		        String day = birthday.substring(2);
+			    String dateString = kakaoProfile.getKakao_account().getBirthyear()+"-"+month+"-"+day; // 예시 문자열 날짜
+		        String pattern = "yyyy-MM-dd";
+		        SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+		        
 				MemberResponseDto kakaoMember = memberService.joinMember(Member.builder()
 						.userName(kakaoUserName)
 						.password(garbagePasswordStr)

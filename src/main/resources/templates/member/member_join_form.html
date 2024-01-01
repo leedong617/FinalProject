@@ -144,7 +144,10 @@ function isNoValidPhoneNo(phoneNo) {
     return true;
 }
 let emailCheck = false;
+
+//회원가입 버튼 클릭시 호출 되는 함수
 let member_join_action_rest=function(data){
+		//이메일 인증 성공시
 		if(emailCheck) {
 		$.ajax({
 				url:'/member/join_rest',
@@ -153,6 +156,7 @@ let member_join_action_rest=function(data){
 				dataType:'json',
 				contentType: 'application/json;charset=UTF-8',
 				success:function(resultJson){
+					//아이디 중복
 					if(resultJson.result==1){
 						$('#reg-username').css('border','0.5px solid orange');
 						$('#reg-username').tooltip({'trigger':'hover', 'title': resultJson.msg});
@@ -160,6 +164,7 @@ let member_join_action_rest=function(data){
 			    		setTimeout(function () {
 					    $('#reg-username').tooltip('dispose');
 					    }, 2000);
+					    //이메일 중복
 					} else if(resultJson.result==2) {
 						$('#reg-username').css('border','0.5px solid green');
 						$('#reg-email').css('border','0.5px solid orange');
@@ -169,6 +174,7 @@ let member_join_action_rest=function(data){
 					    $('#reg-email').tooltip('dispose');
 					    }, 2000);
 			    		emailCheck = false;
+			    		//번호 중복
 					} else if(resultJson.result==3) {
 						$('#reg-username').css('border','0.5px solid green');
 						$('#reg-email').css('border','0.5px solid green');
@@ -178,6 +184,7 @@ let member_join_action_rest=function(data){
 			    		setTimeout(function () {
 					    $('#reg-phone').tooltip('dispose');
 					    }, 2000);
+					    //닉네임 중복
 					} else if(resultJson.result==4) {
 						$('#reg-username').css('border','0.5px solid green');
 						$('#reg-email').css('border','0.5px solid green');
@@ -189,16 +196,16 @@ let member_join_action_rest=function(data){
 					    $('#reg-nickname').tooltip('dispose');
 					    }, 2000);
 					} else {
+						//회원가입 성공 후 회원가입 완료 페이지 이동
 						location.href="/member_join_complete_page";
 		   			}
 				},
 				error:function(){
-					
-					
 					alert("회원가입 실패 다시 시도해 주십시요.");
 				}
 			});
 		} else {
+			//이메일 인증 실패나 진행 안했을 시
 			$('#reg-email').css('border','0.5px solid orange');
 			$('#number').css('border','0.5px solid orange');
 			alert('이메일 인증을 진행해주세요');
@@ -443,6 +450,7 @@ function sendNumber(){
         success: function(data){
             alert("인증번호 발송");
             $("#Confirm").attr("value",data);
+            emailCheck = false;
         },
         error: function(){
 			alert("인증번호 발송 실패");

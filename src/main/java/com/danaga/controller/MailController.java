@@ -20,18 +20,15 @@ public class MailController {
 
     private final MailService mailService;
     private final OrderDao orderDao;
-//    @GetMapping("/mailpage")
-//    public String MailPage(){
-//        return "Mail";
-//    }
+    
     @ResponseBody
     @PostMapping("/emailauthentication")
     public String joinMailSend(String mail){
 
        int number = mailService.joinSendMail(mail);
-
+       // JSON 데이터 String변환
        String num = "" + number;
-
+       
        return num;
     }
     @ResponseBody

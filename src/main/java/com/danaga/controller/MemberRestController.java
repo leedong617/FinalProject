@@ -44,8 +44,7 @@ public class MemberRestController {
 	private final MemberDao memberDao;
 	private final CartService cartService;
 	private final RecentViewService recentViewService;
-	private final OptionSetService optionSetService;
-
+	//아이디 찾기
 	@PostMapping(value = "/findid_rest", produces = "application/json;charset=UTF-8")
 	public Map member_findid_action_rest(@RequestBody MemberFindDto memberFindDto, HttpSession session)
 			throws Exception {
@@ -66,7 +65,7 @@ public class MemberRestController {
 		map.put("result", result);
 		return map;
 	}
-
+	// 비밀번호 찾기
 	@PostMapping(value = "/findpass_rest", produces = "application/json;charset=UTF-8")
 	public Map member_findpass_action_rest(@RequestBody MemberFindDto memberFindDto, HttpSession session)
 			throws Exception {
@@ -92,7 +91,7 @@ public class MemberRestController {
 		map.put("result", result);
 		return map;
 	}
-
+	// 로그인
 	@PostMapping(value = "/login_rest", produces = "application/json;charset=UTF-8")
 	public Map member_login_action_rest(@RequestBody MemberLoginDto memberLoginDto, HttpSession session)
 			throws Exception {
@@ -149,43 +148,41 @@ public class MemberRestController {
 		map.put("result", result);
 		return map;
 	}
-
+	// 회원가입
 	@PostMapping("/join_rest")
-	public Map member_join_action(@RequestBody Member member) throws Exception {
+	public Map member_join_action(@RequestBody MemberResponseDto memberResponseDto) throws Exception {
 		HashMap map = new HashMap<>();
-		// MemberResponseDto memberResponseDto =
-		// MemberResponseDto.builder().userName(userName).password(password).build();
 		int result = 5;
 
 		try {
-			memberService.joinMember(member);
+			memberService.joinMember(Member.toResponseEntity(memberResponseDto));
 		} catch (ExistedMemberByUserNameException e) {
 			result = 1;
 			map.put("result", result);
-			map.put("msg", member.getUserName() + "는 사용중인 아이디입니다.");
+			map.put("msg", Member.toResponseEntity(memberResponseDto).getUserName() + "는 사용중인 아이디입니다.");
 			return map;
 		} catch (ExistedMemberByEmailException e) {
 			result = 2;
 			map.put("result", result);
-			map.put("msg", member.getEmail() + "는 사용중인 이메일입니다.");
+			map.put("msg", Member.toResponseEntity(memberResponseDto).getEmail() + "는 사용중인 이메일입니다.");
 			return map;
 		} catch (ExistedMemberByPhoneNoException e) {
 			result = 3;
 			map.put("result", result);
-			map.put("msg", member.getPhoneNo() + "는 사용중인 번호입니다.");
+			map.put("msg", Member.toResponseEntity(memberResponseDto).getPhoneNo() + "는 사용중인 번호입니다.");
 			return map;
 		} catch (ExistedMemberByNicknameException e) {
 			result = 4;
 			map.put("result", result);
-			map.put("msg", member.getNickname() + "는 사용중인 닉네임입니다.");
+			map.put("msg", Member.toResponseEntity(memberResponseDto).getNickname() + "는 사용중인 닉네임입니다.");
 			return map;
 		}
 		map.put("result", result);
 		return map;
 	}
-
+	// 카카오 회원을 사이트회원으로 전환
 	@PostMapping("/join_rest_kakao")
-	public Map member_join_action_kakao(@RequestBody Member member, HttpSession session) throws Exception {
+	public Map member_join_action_kakao(@RequestBody MemberResponseDto memberResponseDto, HttpSession session) throws Exception {
 		HashMap map = new HashMap<>();
 		// MemberResponseDto memberResponseDto =
 		// MemberResponseDto.builder().userName(userName).password(password).build();
@@ -193,28 +190,28 @@ public class MemberRestController {
 		try {
 			String sUserId = (String) session.getAttribute("sUserId");
 			Long sUserLongId = memberService.getMemberBy(sUserId).getId();
-			member.setId(sUserLongId);
-			MemberResponseDto dto = memberService.kakaoToMember(KakaoMemberUpdateDto.toDto(member));
+			memberResponseDto.setId(sUserLongId);
+			MemberResponseDto dto = memberService.kakaoToMember(KakaoMemberUpdateDto.toDto(Member.toResponseEntity(memberResponseDto)));
 			// 카카오 통합시 이벤트 랜덤 포인트 지급
 			int point = dto.getGradePoint() + memberDao.randomPoint();
 			dto.setGradePoint(dto.getGradePoint() + memberDao.randomPoint());
-			memberService.updateGrade(member, point);
+			memberService.updateGrade(Member.toResponseEntity(memberResponseDto), point);
 		} catch (ExistedMemberByUserNameException e) {
 			result = 1;
 			map.put("result", result);
-			map.put("msg", member.getUserName() + "는 사용중인 아이디입니다.");
+			map.put("msg", Member.toResponseEntity(memberResponseDto).getUserName() + "는 사용중인 아이디입니다.");
 			return map;
 		} catch (ExistedMemberByNicknameException e) {
 			result = 2;
 			map.put("result", result);
-			map.put("msg", member.getNickname() + "는 사용중인 닉네임입니다.");
+			map.put("msg", Member.toResponseEntity(memberResponseDto).getNickname() + "는 사용중인 닉네임입니다.");
 			return map;
 		}
 		map.put("result", result);
 		session.removeAttribute("role");
 		return map;
 	}
-
+	// 회원 정보 수정
 	@LoginCheck
 	@PutMapping(value = "/modify_action_rest", produces = "application/json;charset=UTF-8")
 	public Map member_modify_action(@RequestBody MemberUpdateDto memberUpdateDto, HttpSession session)
@@ -235,7 +232,7 @@ public class MemberRestController {
 		map.put("result", result);
 		return map;
 	}
-
+	// 회원탈퇴
 	@LoginCheck
 	@DeleteMapping(value = "/delete_action_rest", produces = "application/json;charset=UTF-8")
 	public Map delete_action_rest(@RequestBody MemberLoginDto memberLoginDto, HttpSession session) throws Exception {
