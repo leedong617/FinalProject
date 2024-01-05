@@ -27,7 +27,6 @@ public class MailService {
 	// 랜덤 숫자 5자리
 	private static int number;
 	private static String randomString;
-	private final OrderDao orderDao;
 	// 랜덤 숫자 5자리 생성 및 전역변수 할당 메소드
 	public static void createNumber() {
 		number = (int) (Math.random() * (90000)) + 10000;// (int) Math.random() * (최댓값-최소값+1) + 최소값
@@ -68,7 +67,7 @@ public class MailService {
 		
 		return number;
 	}
-
+	// 주문번호 이메일 생성
 	public MimeMessage orderCreateMail(String mail, String orderId) throws Exception{
 	    MimeMessage message = javaMailSender.createMimeMessage();
 	    try {
@@ -84,7 +83,7 @@ public class MailService {
 	    }
 	    return message;
 	}
-	
+	// 주문번호 이메일 발송
 	public String findOrderIdSendMail(String mail, String orderId) throws Exception {
 		MimeMessage message = orderCreateMail(mail, orderId);
 		javaMailSender.send(message);
@@ -92,7 +91,7 @@ public class MailService {
 	}
 
 	
-
+	// 임시 비밀번호 이메일 생성
 	public MimeMessage findPassCreateMail(String mail) throws Exception {
 		createRandomPass();
 		MimeMessage message = javaMailSender.createMimeMessage();
@@ -114,7 +113,7 @@ public class MailService {
 		}
 		return message;
 	}
-
+	// 임시 비밀번호 이메일 발송
 	public String findPassSendMail(String mail) throws Exception {
 
 		MimeMessage message = findPassCreateMail(mail);
@@ -123,7 +122,7 @@ public class MailService {
 
 		return randomString;
 	}
-
+	// 찾은 아이디 이메일 생성
 	public MimeMessage findIdCreateMail(String mail) throws Exception {
 		createNumber();
 		MimeMessage message = javaMailSender.createMimeMessage();
@@ -142,7 +141,7 @@ public class MailService {
 		}
 		return message;
 	}
-
+	// 찾은 아이디 이메일 발송
 	public String findIdSendMail(String mail) throws Exception {
 
 		MimeMessage message = findIdCreateMail(mail);

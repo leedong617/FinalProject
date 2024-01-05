@@ -14,14 +14,13 @@ import com.danaga.service.OrderService;
 
 import lombok.RequiredArgsConstructor;
 
-@Controller
+@RestController
 @RequiredArgsConstructor
 public class MailController {
 
     private final MailService mailService;
     private final OrderDao orderDao;
-    
-    @ResponseBody
+    // 회원가입 이메일 인증번호 발송
     @PostMapping("/emailauthentication")
     public String joinMailSend(String mail){
 
@@ -31,7 +30,7 @@ public class MailController {
        
        return num;
     }
-    @ResponseBody
+    // 임시 비밀번호 발급
     @PostMapping("/findpassemailauthentication")
     public Map findPassMailSend(String mail) throws Exception{
     	
@@ -42,7 +41,7 @@ public class MailController {
     	
     	return map;
     }
-    @ResponseBody
+    // 회원 아이디 발송
     @PostMapping("/findidemailauthentication")
     public Map findidMailSend(String mail) throws Exception{
     	
@@ -52,7 +51,7 @@ public class MailController {
     	map.put("sendId", id);
     	return map;
     }
-    @ResponseBody
+    // 주문 번호 발송
     @PostMapping("/sendOrderIdemailauthentication")
     public Map sendOrderIdMailSend(String mail, @RequestParam String orderId) throws Exception{
     	

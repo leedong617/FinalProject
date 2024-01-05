@@ -34,6 +34,7 @@ import com.danaga.service.product.OptionSetService;
 import com.danaga.service.product.RecentViewService;
 
 import jakarta.servlet.http.HttpSession;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -92,6 +93,7 @@ public class MemberRestController {
 		return map;
 	}
 	// 로그인
+	@Transactional
 	@PostMapping(value = "/login_rest", produces = "application/json;charset=UTF-8")
 	public Map member_login_action_rest(@RequestBody MemberLoginDto memberLoginDto, HttpSession session)
 			throws Exception {
@@ -181,6 +183,7 @@ public class MemberRestController {
 		return map;
 	}
 	// 카카오 회원을 사이트회원으로 전환
+	@Transactional
 	@PostMapping("/join_rest_kakao")
 	public Map member_join_action_kakao(@RequestBody MemberResponseDto memberResponseDto, HttpSession session) throws Exception {
 		HashMap map = new HashMap<>();

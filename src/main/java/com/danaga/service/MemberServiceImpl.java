@@ -36,7 +36,7 @@ public class MemberServiceImpl implements MemberService {
 
 	@Autowired
 	private OrderDao orderDao;
-
+	// 모든 회원 정보 찾기
 	public List<MemberResponseDto> getMembers() {
 		List<Member> members = memberDao.findMembers();
 		List<MemberResponseDto> responseMembers = new ArrayList<>();
@@ -45,12 +45,11 @@ public class MemberServiceImpl implements MemberService {
 		}
 		return responseMembers;
 	}
-
+	// 아이디, 이메일, 휴대폰 번호로 등록된 회원 객체 찾기
 	public MemberResponseDto getMemberBy(String value) throws Exception {
 		return MemberResponseDto.toDto(memberDao.findMember(value));
 	}
-
-	@Transactional
+	//회원 가입
 	public MemberResponseDto joinMember(Member member) throws Exception, ExistedMemberByUserNameException {
 		// 1.중복체크
 		int randomPoint = memberDao.randomPoint();
@@ -70,7 +69,7 @@ public class MemberServiceImpl implements MemberService {
 		member.setGrade(memberDao.randomPointGrade(randomPoint));
 		return MemberResponseDto.toDto(memberDao.insert(member));
 	}
-
+	//비회원 주문시 게스트 회원 생성
 	public MemberResponseDto joinGuest(MemberInsertGuestDto memberInsertGuestDto) throws Exception {
 		if(memberRepository.findByEmail(memberInsertGuestDto.getEmail()).isPresent()) {
 			Member member = memberDao.findMember(memberInsertGuestDto.getEmail());
@@ -84,8 +83,7 @@ public class MemberServiceImpl implements MemberService {
 			return MemberResponseDto.toDto(memberDao.insert(Member.toGuestEntity(memberInsertGuestDto)));
 		}
 	}
-
-	@Transactional
+	// 회원 수정
 	public MemberResponseDto updateMember(MemberUpdateDto memberUpdateDto) throws Exception, ExistedMemberByNicknameException {
 		Member originalMember = memberRepository.findById(memberUpdateDto.getId()).get();
 		Member member = Member.builder().id(memberUpdateDto.getId()).userName(originalMember.getUserName())
@@ -100,7 +98,7 @@ public class MemberServiceImpl implements MemberService {
 		}
 		return MemberResponseDto.toDto(memberDao.update(member));
 	}
-
+	// 카카오 회원을 사이트 회원으로 업데이트(카카오 통합)
 	@Transactional
 	public MemberResponseDto kakaoToMember(KakaoMemberUpdateDto kakaoMemberUpdateDto) throws Exception, ExistedMemberByNicknameException {
 		Member originalMember = memberRepository.findById(kakaoMemberUpdateDto.getId()).get();
@@ -118,7 +116,7 @@ public class MemberServiceImpl implements MemberService {
 		memberDao.updatePoint(member);
 		return MemberResponseDto.toDto(memberDao.update(member));
 	}
-
+	// 회원 탈퇴
 	@Transactional
 	public void deleteMember(String value) throws Exception {
 		orderDao.ordersMemberIdNull(value);
@@ -141,9 +139,8 @@ public class MemberServiceImpl implements MemberService {
 	public boolean isDuplicateByNickname(String nickname) throws Exception {
 		return memberDao.existedMemberByNickname(nickname);
 	}
-
+	// 로그인
 	public boolean login(String userName, String password) throws Exception {
-		// 비회원 세션 카트에서 로그인하면 세션 카트를 로그인한 멤버의 카트DB에 담게 구현?
 		Optional<Member> findOptionalMember = memberRepository.findByUserName(userName);
 		if (findOptionalMember.isEmpty()) {
 			throw new MemberNotFoundException(userName + " 는 존재하지않는 아이디입니다.");
@@ -155,8 +152,7 @@ public class MemberServiceImpl implements MemberService {
 		}
 		return true;
 	}
-
-	@Transactional
+	// 등급 업데이트
 	@Override
 	public void updateGrade(Member member, int gradePoint) throws Exception {
 		member.setGradePoint(member.getGradePoint() + gradePoint);
@@ -179,15 +175,14 @@ public class MemberServiceImpl implements MemberService {
 			member.setGrade("Diamond");
 		}
 		memberDao.updatePoint(member);
-		System.out.println("멤버가 안찾아짐" + member);
 
 	}
-
+	//아아디로 회원 pk찾기
 	@Override
 	public Long findIdByUsername(String username) throws Exception {
 		return memberDao.findMember(username).getId();
 	}
-
+	// 해당 아이디에 등록된 이메일인지 체크
 	@Override
 	public boolean isMatchEmailByUserName(String userName, String email) throws Exception {
 		Optional<Member> findOptionalMember = memberRepository.findByUserName(userName);
