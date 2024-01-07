@@ -62,7 +62,7 @@ public class MemberRestController {
 			map.put("msg", memberFindDto.getEmail() + "는 등록되지 않은 이메일입니다.");
 			return map;
 		}
-		
+
 		map.put("result", result);
 		return map;
 	}
