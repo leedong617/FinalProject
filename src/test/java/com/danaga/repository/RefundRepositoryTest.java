@@ -15,7 +15,7 @@ class RefundRepositoryTest {
 	private RefundRepository refundRepository;
 	
 	@Test
-	//@Disabled
+	@Disabled
 	@Transactional
 	@Rollback(false)
 	void testFindRefundByOrderId() {

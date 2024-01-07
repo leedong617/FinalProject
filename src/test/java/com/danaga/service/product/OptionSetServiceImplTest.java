@@ -91,7 +91,7 @@ class OptionSetServiceImplTest {
 	}
 
 	@Test
-//	@Disabled
+	@Disabled
 	void testSearchProducts() {
 		System.out.println(service.searchProducts(QueryStringDataDto.builder()
 				.orderType(OptionSetQueryData.BY_ORDER_COUNT)

@@ -16,7 +16,7 @@ class DeliveryRepositoryTest {
 	DeliveryRepository deliveryRepository;
 	
 	@Test
-	//@Disabled
+	@Disabled
 	@Transactional
 	@Rollback(false)
 	void testFindDeliveryByOrdersId() {

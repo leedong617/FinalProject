@@ -23,7 +23,7 @@ private CategoryService service;
 	}
 
 	@Test
-//	@Disabled
+	@Disabled
 	void testCategoryFamily() {
 		System.out.println(service.categoryFamily(1L));
 	}

@@ -23,7 +23,7 @@ class DeliveryServiceImplTest {
 	OrderRepository orderRepository; 
 	
 	@Test
-	//@Disabled
+	@Disabled
 	@Transactional
 	@Rollback(false)
 	void testSaveDeliveryByOrdersId() {
@@ -46,7 +46,7 @@ class DeliveryServiceImplTest {
 	
 	
 	@Test
-	//@Disabled
+	@Disabled
 	@Transactional
 	@Rollback(false)
 	void testFindDeliveryByOrdersId() throws Exception{

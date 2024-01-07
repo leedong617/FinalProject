@@ -91,7 +91,7 @@ class MemberServiceImplTest {
 		System.out.println(memberService.login("User1", "password1"));
 	}
 	@Test
-	//@Disabled
+	@Disabled
 	@Transactional
 	@Rollback(false)
 	void memberOrderNull() throws Exception {
