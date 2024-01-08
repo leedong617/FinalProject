@@ -7,11 +7,11 @@ on:
    
 # flow에서 사용할 변수 같은 느낌입니다.
 env:
-  AWS_REGION: AWS 지역
-  S3_BUCKET_NAME: AWS S3 버킷 이름
-  CODE_DEPLOY_APPLICATION_NAME: AWS CodeDeploy App 이름
-  CODE_DEPLOY_DEPLOYMENT_GROUP_NAME: AWS CodeDeploy 배포 그룹 명
-  working-directory: ./프로젝트 경로 # 이 코드는 제 프로젝트 경로를 맞춰주기 위해 적어주었습니다. 필요하시면 적으세요 !
+  AWS_REGION: ap-northeast-2
+  S3_BUCKET_NAME: danaga-github-actions-s3-bucket
+  CODE_DEPLOY_APPLICATION_NAME: danaga-codedeploy-app
+  CODE_DEPLOY_DEPLOYMENT_GROUP_NAME: danaga-codedeploy-deployment-group
+  #working-directory: ./프로젝트 경로 # 이 코드는 제 프로젝트 경로를 맞춰주기 위해 적어주었습니다. 필요하시면 적으세요 !
 
 permissions:
   contents: read
@@ -29,10 +29,10 @@ jobs:
       uses: actions/checkout@v3
     
     # 2) JDK 11 셋팅
-    - name: Set up JDK 11
+    - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
-        java-version: '11'
+        java-version: '17'
         distribution: 'temurin'
         
     # 3) gradlew 권한 설정
