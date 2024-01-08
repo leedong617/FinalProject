@@ -20,5 +20,4 @@ public interface MemberDao {
 	public Member updateGuestEmail(Member updateMember) throws Exception;
 	public int randomPoint();
 	public String randomPointGrade(int randomPoint);
-	
 	}
