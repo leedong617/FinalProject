@@ -36,16 +36,21 @@ jobs:
           touch ./application.properties
           echo "${{ secrets.APPLICATION }}" > ./application.properties
         shell: bash
-        
+      # gradlew 권한 설정
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
+      # gradle 빌드
       - name: Build with Gradle
         run: ./gradlew build
         
+      # 수정
       - name: Make zip file
         run: |
           mkdir deploy
+          cp ./appspec.yml ./deploy/
+          cp ./Dockerfile ./deploy/
+          cp ./scripts/*.sh ./deploy/
           cp ./build/libs/*.jar ./deploy/
           zip -r -qq -j ./spring-build.zip ./deploy
           
@@ -61,3 +66,11 @@ jobs:
           aws s3 cp \
             --region ap-northeast-2 \
             ./spring-build.zip s3://danaga-github-actions-s3-bucket
+      
+      # 추가
+      - name: Code Deploy
+        run: aws deploy create-deployment 
+          --application-name danaga-codedeploy-app
+          --deployment-config-name CodeDeployDefault.OneAtATime
+          --deployment-group-name danaga-codedeploy-deployment-group
+          --s3-location bucket=danaga-github-actions-s3-bucket,bundleType=zip,key=spring-build.zip
