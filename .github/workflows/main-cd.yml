@@ -47,8 +47,8 @@ jobs:
       - name: Docker build & Push
         run: |
           docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASSWORD }}
-          docker build -f Dockerfile -t ${{ secrets.DOCKERHUB_REPOSITORY }}
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}
+          docker build -f Dockerfile -t ${{ secrets.DOCKERHUB_REPOSITORY }}/goorm .
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}/goorm
       #docker-compose 파일을 ec2 서버에 배포
       - name: Deploy to Prod
         uses: appleboy/ssh-action@master
@@ -59,8 +59,8 @@ jobs:
           key: ${{ secrets.EC2_PRIVATE_KEY }}
           envs: GITHUB_SHA
           script: |
-             docker stop latest
-             docker rm latest
-             sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}
-             docker run -d --name latest -p 8080:8080 ${{ secrets.DOCKERHUB_REPOSITORY }}
+             docker stop goorm
+             docker rm goorm
+             sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPOSITORY }}/goorm
+             docker run -d --name goorm -p 8080:8080 ${{ secrets.DOCKERHUB_REPOSITORY }}/goorm
              docker rmi -f $(docker images -f "dangling=true" -q)
