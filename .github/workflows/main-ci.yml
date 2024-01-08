@@ -1,4 +1,4 @@
-name: Deploy to Production
+name: Java CI with Gradle
 
 on:
   push:
