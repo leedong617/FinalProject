@@ -65,7 +65,7 @@ jobs:
         run: |
           aws s3 cp \
             --region ap-northeast-2 \
-           ./$GITHUB_SHA.zip s3://danaga-github-actions-s3-bucket/$GITHUB_SHA
+           ./$GITHUB_SHA.zip s3://danaga-github-actions-s3-bucket
       
       # 추가
       - name: Code Deploy
