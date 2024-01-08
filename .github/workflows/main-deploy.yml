@@ -29,7 +29,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
-      - name: Make application.yml
+      - name: Make application.properties
         run: |
           cd ./src/main
           cd ./resources
