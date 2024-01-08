@@ -19,7 +19,7 @@ public class MemberController {
 
 	@GetMapping("/member_login_form")
 	public String member_login_form() {
-		return "member/member_login_form";
+		return "member/member_login_for";
 	}
 
 
