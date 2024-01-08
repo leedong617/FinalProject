@@ -37,6 +37,9 @@ out/
 ### VS Code ###
 .vscode/
 
+## .properties files ##
+src/main/**/application.properties
+
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
