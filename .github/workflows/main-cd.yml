@@ -59,8 +59,8 @@ jobs:
           key: ${{ secrets.EC2_PRIVATE_KEY }}
           envs: GITHUB_SHA
           script: |
-             docker stop danagacontainer
-             docker rm danagacontainer
+             docker stop danaga
+             docker rm danaga
              sudo docker pull dororong/danaga
-             docker run -d --name danagacontainer -p 8080:8080 dororong/danaga
+             docker run -d --name danaga -p 8080:8080 dororong/danaga
              docker rmi -f $(docker images -f "dangling=true" -q)
