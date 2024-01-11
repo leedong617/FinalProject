@@ -24,11 +24,10 @@ jobs:
         distribution: 'temurin'
     # application file 생성
     - name: Make application.properties
-        run: |
-          cd ./src/main/resources
-          touch ./application.properties
-          echo "${{ secrets.PROPERTIES }}" > ./application.properties
-        shell: bash
+      run: cd ./src/main/resources
+           touch ./application.properties
+           echo "${{ secrets.PROPERTIES }}" > ./application.properties
+
         
     # 2. Spring Boot 애플리케이션 빌드
     - name: Build with Gradle
