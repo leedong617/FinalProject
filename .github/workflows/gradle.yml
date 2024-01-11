@@ -22,8 +22,8 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        
-    - name: Make application-prod.properties
+    # application file 생성
+    - name: Make application.properties
         run: |
           cd ./src/main/resources
           touch ./application.properties
