@@ -25,7 +25,8 @@ jobs:
     
     # application file 생성
     - name: Make application.properties
-      run: cd ./src/main/resources && some_other_command
+      run: |
+           cd ./src/main/resources
            touch ./application.properties
            echo "${{ secrets.PROPERTIES }}" > ./application.properties
 
