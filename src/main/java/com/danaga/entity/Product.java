@@ -42,7 +42,7 @@ public class Product extends BaseEntity {//제품의 기본 모델 정보
 	private String prevImage;//디테일이미지
 	private String img;//제품 이미지
 	
-	@OneToMany(mappedBy = "product",fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "product")
 	@Builder.Default
 	private List<CategorySet> categorySets = new ArrayList<>();
 	//하나의 제품은 부모카테고리, 자식카테고리 여러개를 가질 수 있다. 

@@ -47,7 +47,7 @@ public class OptionSet extends BaseEntity {
 	@Builder.Default
 	private Integer orderCount=0;//주문수
 
-	@OneToMany(mappedBy = "optionSet", fetch = FetchType.EAGER, cascade = {CascadeType.REMOVE,CascadeType.PERSIST},orphanRemoval = true)
+	@OneToMany(mappedBy = "optionSet", fetch = FetchType.LAZY, cascade = {CascadeType.REMOVE,CascadeType.PERSIST},orphanRemoval = true)
 	@Builder.Default
 	private List<Options> options = new ArrayList<>();//옵션들을 가진다.
 
@@ -55,25 +55,25 @@ public class OptionSet extends BaseEntity {
 	@JoinColumn(name = "productId")
 	private Product product;//프로덕트FK
 
-	@OneToMany(mappedBy = "optionSet",cascade = CascadeType.REMOVE,orphanRemoval = true)
+	@OneToMany(mappedBy = "optionSet",cascade = CascadeType.REMOVE,orphanRemoval = true,fetch = FetchType.LAZY)
 	@Builder.Default
 	@ToString.Exclude
 	private List<OrderItem> orderItems = new ArrayList<>();
 	//오더아이템List 
 
-	@OneToMany(mappedBy = "optionSet",cascade = CascadeType.REMOVE,orphanRemoval = true)
+	@OneToMany(mappedBy = "optionSet",cascade = CascadeType.REMOVE,orphanRemoval = true,fetch = FetchType.LAZY)
 	@Builder.Default 
 	@ToString.Exclude
 	private List<Cart> carts = new ArrayList<>();
 	//카트아이템List
 	
 	@Builder.Default
-	@OneToMany(mappedBy = "optionSet",cascade = CascadeType.REMOVE,orphanRemoval = true)
+	@OneToMany(mappedBy = "optionSet",cascade = CascadeType.REMOVE,orphanRemoval = true,fetch = FetchType.LAZY)
 	@ToString.Exclude
 	private List<RecentView> recentViews = new ArrayList<>();
 	
 	@Builder.Default
-	@OneToMany(mappedBy = "optionSet",cascade = CascadeType.REMOVE,orphanRemoval = true, fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "optionSet",cascade = CascadeType.REMOVE,orphanRemoval = true, fetch = FetchType.LAZY)
 	private List<Interest> interests = new ArrayList<>();
 	
 
