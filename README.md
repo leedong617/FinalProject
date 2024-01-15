@@ -45,8 +45,8 @@
 <img width="698" alt="rest api 코드" src="https://github.com/leedong617/leedong617/assets/133841274/209f9d11-2b0a-4b83-adc2-db52e2b70e98"><br>
 <img width="374" alt="ajax요청" src="https://github.com/leedong617/leedong617/assets/133841274/910a453c-7253-4f6c-9397-92b692a04f9f"><br>
 <img width="239" alt="REST API설명 1" src="https://github.com/leedong617/leedong617/assets/133841274/b82d75e5-576a-415e-9f40-195712dfcbfb"><br>
-❗RestController를 사용하여 회원 Rest API를 구축 하였습니다.<br>
-▶️ 구축한 Rest API를 사용하여 회원가입 버튼을 누를시 AJAX로 요청한 URI의 메소드를 실행하고 JSON 데이터를 반환합니다. 반환받은 JSON 데이터를 이용하여 Tooltip 메시지를 띄우거나 회원가입 완료 페이지로 이동합니다.
+<h4>❗RestController를 사용하여 회원 Rest API를 구축 하였습니다.<br>
+▶️ 구축한 Rest API를 사용하여 회원가입 버튼을 누를시 AJAX로 요청한 URI의 메소드를 실행하고 JSON 데이터를 반환합니다. 반환받은 JSON 데이터를 이용하여 Tooltip 메시지를 띄우거나 회원가입 완료 페이지로 이동합니다.</h4>
 <h3>❗이메일 인증 </h3>
 <h4>JavaMailSender API와 Google SMTP를 활용하여 이메일 인증 서비스를 구현하였습니다.</h4>
 <img width="452" alt="이메일인증2" src="https://github.com/leedong617/leedong617/assets/133841274/669e47ea-e42b-43d4-bfc7-252bce2823b5"><br>
