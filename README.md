@@ -1,6 +1,5 @@
 # 03.Final_Project (JAVA, JPA, Oracle) (다나가)
-<details>
-  
+
 ### 프로젝트 소개
 수요가 높은 사이트 종류 중 하나인 전자 상거래 사이트 중 다나와를 벤치마킹한 사이트를 제작 하였습니다.
 
@@ -62,4 +61,3 @@ ERD<br>
 ![찾기](https://github.com/leedong617/leedong617/assets/133841274/a3e9f115-fb59-4f97-bc2c-1aa01818efea)<br>
 탈퇴<br>
 ![탈퇴](https://github.com/leedong617/leedong617/assets/133841274/bed2d3c4-f4c3-4622-b537-5b18de485a07)<br>
-</details>
