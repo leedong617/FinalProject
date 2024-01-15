@@ -76,7 +76,7 @@ Kakao에서 보낸 code로 인증 토큰을 생성하고 생성된 토큰을 사
 존재하지 않는다면 MemberNotFoundException 발생하여 KakaoProfile을 사용하여 회원가입이 진행됩니다.
 </h3>
 
-### ⭐UI 화면
+### <h2>⭐UI 화면</h2>
 로그인<br>
 <img width="500" alt="찾기" src="https://github.com/leedong617/leedong617/assets/133841274/b160eecc-5549-4926-960d-ed1ee9d9b06e"><br>
 카카오로그인<br>
