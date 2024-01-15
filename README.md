@@ -29,6 +29,10 @@
 <https://github.com/leedong617/FinalProject/> github주소<br>
 다나가 프로젝트 Docker EC2 RDS 배포 <http://3.37.149.223:5000/index>
 <br>
+### 개발 개요
+❓<h2>왜 전자상거래 사이트를 프로젝트 주제로 삼았는지</h2>
+<img width="487" alt="웹사이트 수요" src="https://github.com/leedong617/leedong617/assets/133841274/aea3a8c9-d294-488c-819c-e2e5b053e124">
+<h2>개발자들에게 있어 뗄레야 뗄 수 없는 GPT선생님께 물어본 결과 수요가 높은 사이트 유형 중 하나 이기도 하고 고민없이 배웠던 기술들을 잘 활용하여 보여 드릴 수 있는 주제 이기도 해서 정하게 되었습니다.</h2>
 <br>
 ERD<br>
 <img width="806" alt="스크린샷 2023-12-14 011918" src="https://github.com/leedong617/leedong617/assets/133841274/903d3a9d-b111-4f32-881e-d17f18e55146"><br>
