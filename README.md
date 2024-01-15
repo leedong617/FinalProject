@@ -31,12 +31,12 @@
 ### <h2>⭐개발 개요</h2>
 <h2>❓왜 전자상거래 사이트를 프로젝트 주제로 삼았는지</h2>
 <img width="487" alt="웹사이트 수요" src="https://github.com/leedong617/leedong617/assets/133841274/aea3a8c9-d294-488c-819c-e2e5b053e124">
-<h3>개발자들에게 있어 뗄레야 뗄 수 없는 GPT선생님께 물어본 결과 수요가 높은 사이트 유형 중 하나 이기도 하고 고민없이 배웠던 기술들을 잘 활용하여 보여 드릴 수 있는 주제 이기도 해서 정하게 되었습니다.</h3>
+<h3>▶️ 개발자들에게 있어 뗄레야 뗄 수 없는 GPT선생님께 물어본 결과 수요가 높은 사이트 유형 중 하나 이기도 하고 고민없이 배웠던 기술들을 잘 활용하여 보여 드릴 수 있는 주제 이기도 해서 정하게 되었습니다.</h3>
 <br>
 
 ### <h2>⭐아키텍처</h2>
 <img width="950" alt="아키텍처" src="https://github.com/leedong617/leedong617/assets/133841274/1c97c6b9-56b0-4919-b41d-af54dfa46a98">
-<h3>해당 프로젝트를 push하면 github actions를 통해 gradle로 jar 파일을 build하고 해당 jar파일로 image를 build해 docker hub에 push한 뒤 해당 웹 프로젝트를 docker를 통해 배포중인 ec2서버에서 docker image를 pull하고 실행 중 이던 docker container를 중지시키고 pull한 docker image로 다시 docker container를 실행시켜 자동 배포하는 CI / CD 환경을 구축하였습니다.</h3>
+<h3>▶️ 해당 프로젝트를 push하면 github actions를 통해 gradle로 jar 파일을 build하고 해당 jar파일로 image를 build해 docker hub에 push한 뒤 해당 웹 프로젝트를 docker를 통해 배포중인 ec2서버에서 docker image를 pull하고 실행 중 이던 docker container를 중지시키고 pull한 docker image로 다시 docker container를 실행시켜 자동 배포하는 CI / CD 환경을 구축하였습니다.</h3>
 <h2>ERD</h2>
 <img width="1091" alt="ERD" src="https://github.com/leedong617/leedong617/assets/133841274/355a601b-7b3e-41ab-9fa1-a0571267f4cb">
 <h2>주요 기능</h2>
