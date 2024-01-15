@@ -42,9 +42,17 @@
 <h2>⭐주요 기능</h2>
 <img width="671" alt="스크린샷 2023-12-14 011833" src="https://github.com/leedong617/leedong617/assets/133841274/72517656-e00e-449d-9fb5-3a142f06a99a"><br>
 <h3>❗Rest API </h3>
-
+<img width="698" alt="rest api 코드" src="https://github.com/leedong617/leedong617/assets/133841274/209f9d11-2b0a-4b83-adc2-db52e2b70e98"><br>
+<img width="374" alt="ajax요청" src="https://github.com/leedong617/leedong617/assets/133841274/910a453c-7253-4f6c-9397-92b692a04f9f"><br>
+<img width="239" alt="REST API설명 1" src="https://github.com/leedong617/leedong617/assets/133841274/b82d75e5-576a-415e-9f40-195712dfcbfb"><br>
 <h3>❗이메일 인증 </h3>
-
+<img width="452" alt="이메일인증2" src="https://github.com/leedong617/leedong617/assets/133841274/669e47ea-e42b-43d4-bfc7-252bce2823b5"><br>
+<img width="269" alt="이메일인증3" src="https://github.com/leedong617/leedong617/assets/133841274/7bfb3f02-76ab-44bb-b997-528f6ec9c31a"><br>
+<img width="463" alt="이메일인증4" src="https://github.com/leedong617/leedong617/assets/133841274/0f5d4f28-298c-4c5d-94a9-af12e55d42b2"><br>
+<img width="665" alt="이메일인증5" src="https://github.com/leedong617/leedong617/assets/133841274/ca2dffb7-6d4f-49e5-bf04-d74e4234ffb0"><br>
+<img width="479" alt="이메일인증6" src="https://github.com/leedong617/leedong617/assets/133841274/c4b5fe03-f3bf-4281-8d44-60d333ef8310"><br>
+<img width="328" alt="메일컨트롤러" src="https://github.com/leedong617/leedong617/assets/133841274/77fd4eda-c19c-423e-af9f-70aa8deabb7d"><br>
+<img width="266" alt="이메일인증ajax" src="https://github.com/leedong617/leedong617/assets/133841274/c22beff0-f23c-4156-9b3b-96eb6ecdf7e3"><br>
 <h3>❗카카오 로그인 </h3>
 로그인<br>
 ![로그인](https://github.com/leedong617/leedong617/assets/133841274/a0d16215-ea3f-4a73-9a84-3c563f98efa9)<br>
