@@ -56,10 +56,10 @@
 <h4>▶️ 전역 변수 number선언 및 전역 메소드 createNumber() 생성 <br>createNumber()는 number에 랜덤으로 5자리의 int를 할당합니다.
 </h4>
 <img width="479" alt="이메일인증6" src="https://github.com/leedong617/leedong617/assets/133841274/c4b5fe03-f3bf-4281-8d44-60d333ef8310"><br>
-<h4>▶️ JoinCreateMail(String mail)<br>
+<h4>▶️ JoinCreateMail(String mail)<br><br>
 createNumber()를 호출해 number를 할당하고 메일의 ‘수신자’와 ‘제목’ ‘내용’을 설정 후 반환합니다.
 </h4>
-<h4>▶️ JoinSendMail(String mail)<br>
+<h4>▶️ JoinSendMail(String mail)<br><br>
 JoinCreateMail(String mail)의 반환 받은 데이터를 발송하고 할당된 전역변수 number를 반환합니다. 
 </h4>
 <img width="328" alt="메일컨트롤러" src="https://github.com/leedong617/leedong617/assets/133841274/77fd4eda-c19c-423e-af9f-70aa8deabb7d"><br>
