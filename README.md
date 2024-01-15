@@ -76,22 +76,22 @@ Kakao에서 보낸 code로 인증 토큰을 생성하고 생성된 토큰을 사
 존재하지 않는다면 MemberNotFoundException 발생하여 KakaoProfile을 사용하여 회원가입이 진행됩니다.
 </h3>
 로그인<br>
-![로그인](https://github.com/leedong617/leedong617/assets/133841274/a0d16215-ea3f-4a73-9a84-3c563f98efa9)<br>
+<img width="500" alt="찾기" src="https://github.com/leedong617/leedong617/assets/133841274/b160eecc-5549-4926-960d-ed1ee9d9b06e"><br>
 카카오로그인<br>
-![카카오로그인](https://github.com/leedong617/leedong617/assets/133841274/aecf4977-9630-45af-a797-d44f3d064843)<br>
+<img width="500" alt="카카오로그인1" src="https://github.com/leedong617/leedong617/assets/133841274/1eb64bd0-3211-4483-95e3-fa5d487f4901"><br>
 카카오로그인2<br>
-![카카오로그인2](https://github.com/leedong617/leedong617/assets/133841274/0e23f33b-5c99-4cd7-b5f8-17c48aee866c)<br>
+<img width="500" alt="카카오로그인2" src="https://github.com/leedong617/leedong617/assets/133841274/48eae22a-5d4b-4f53-a582-8b05a7e8bbc6"><br>
 카카오로그인3<br>
-![카카오로그인3](https://github.com/leedong617/leedong617/assets/133841274/1c48966c-e636-4a74-847f-f13f92ca3565)<br>
+<img width="500" alt="카카오로그인3" src="https://github.com/leedong617/leedong617/assets/133841274/d310082a-ab5d-4e38-8341-ea1de23c2090"><br>
 회원가입<br>
-![회원가입](https://github.com/leedong617/leedong617/assets/133841274/42dfb74b-3fd6-4af5-8852-16596bf04254)<br>
+<img width="500" alt="회원가입 " src="https://github.com/leedong617/leedong617/assets/133841274/ebf862d7-4976-4b17-8faf-583c4894e24d"><br>
 회원가입완료<br>
-![회원가입완료](https://github.com/leedong617/leedong617/assets/133841274/ab121615-26d3-4264-9b10-7a0fcfe30a4d)<br>
+<img width="500" alt="회원가입완료 " src="https://github.com/leedong617/leedong617/assets/133841274/1cc305f3-a7fe-47f5-b347-99e7e32090ba"><br>
 마이페이지<br>
-![마이페이지](https://github.com/leedong617/leedong617/assets/133841274/157cd114-84f3-4e0a-b024-56c58321c6e1)<br>
+<img width="500" alt="마이페이지 " src="https://github.com/leedong617/leedong617/assets/133841274/aa7b6338-4474-4127-bc64-1138558bbfe4"><br>
 수정<br>
-![수정](https://github.com/leedong617/leedong617/assets/133841274/bb8dbcca-f8e4-4e1f-9198-56a37bcc8efa)<br>
+<img width="500" alt="수정" src="https://github.com/leedong617/leedong617/assets/133841274/2333e128-4f66-4d20-a62b-96de2e87d8f6"><br>
 찾기<br>
-![찾기](https://github.com/leedong617/leedong617/assets/133841274/a3e9f115-fb59-4f97-bc2c-1aa01818efea)<br>
+<img width="500" alt="찾기" src="https://github.com/leedong617/leedong617/assets/133841274/b160eecc-5549-4926-960d-ed1ee9d9b06e"><br>
 탈퇴<br>
-![탈퇴](https://github.com/leedong617/leedong617/assets/133841274/bed2d3c4-f4c3-4622-b537-5b18de485a07)<br>
+<img width="500" alt="탈퇴 " src="https://github.com/leedong617/leedong617/assets/133841274/9cd22192-3917-439e-9ab9-c4ef8edbd1c0"><br>
