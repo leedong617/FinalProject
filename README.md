@@ -75,6 +75,8 @@ Kakao에서 보낸 code로 인증 토큰을 생성하고 생성된 토큰을 사
 회원의 이메일에는 Unique설정되어있으며 KakaoProfile에서 가져온 이메일이 DB에 존재한다면 해당 이메일을 가진 회원으로 로그인이 진행되며 
 존재하지 않는다면 MemberNotFoundException 발생하여 KakaoProfile을 사용하여 회원가입이 진행됩니다.
 </h3>
+
+### UI 화면
 로그인<br>
 <img width="500" alt="찾기" src="https://github.com/leedong617/leedong617/assets/133841274/b160eecc-5549-4926-960d-ed1ee9d9b06e"><br>
 카카오로그인<br>
