@@ -1,18 +1,18 @@
 # 03.Final_Project (JAVA, JPA, Oracle) (다나가)
 
-### <h2>-프로젝트 소개</h2>
+### <h2>⭐프로젝트 소개</h2>
 수요가 높은 사이트 종류 중 하나인 전자 상거래 사이트 중 다나와를 벤치마킹한 사이트를 제작 하였습니다.
 
-### <h2>-개발 기간</h2>
+### <h2>⭐개발 기간</h2>
 총 35일 (2023.10.12 ~ 2023.11.15)
 
-### <h2>-담당 파트</h2>
+### <h2>⭐담당 파트</h2>
 | Member |
 |----------|
 | 회원API</br> 로그인</br> 카카오(로그인,주소)</br> 아이디 비밀번호 찾기</br> 이메일 인증</br> |
 
 
-### <h2>-개발 환경</h2>
+### <h2>⭐개발 환경</h2>
 
 <img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white"> <img src="https://img.shields.io/badge/Spring Data JPA-6DB33F?style=for-the-badge&logo=spring&logoColor=white"> 
 <img src="https://img.shields.io/badge/Thymeleaf-005F0F?style=for-the-badge&logo=Thymeleaf&logoColor=white"> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
@@ -23,18 +23,18 @@
 <img src="https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"> <img src="https://img.shields.io/badge/GitHub Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white"> <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> For distribute <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white"> For develop
 <br>
 
-### <h2>-상세</h2>
+### <h2>⭐상세</h2>
 [어벤져스_발표자료.pdf](https://github.com/leedong617/leedong617/files/13663640/_.pdf)<br>
 <https://github.com/leedong617/FinalProject/> github주소<br>
 다나가 프로젝트 Docker EC2 RDS 배포 <http://3.37.149.223:5000/index>
 <br>
-### <h2>개발 개요</h2>
+### <h2>⭐개발 개요</h2>
 <h2>❓왜 전자상거래 사이트를 프로젝트 주제로 삼았는지</h2>
 <img width="487" alt="웹사이트 수요" src="https://github.com/leedong617/leedong617/assets/133841274/aea3a8c9-d294-488c-819c-e2e5b053e124">
 <h3>개발자들에게 있어 뗄레야 뗄 수 없는 GPT선생님께 물어본 결과 수요가 높은 사이트 유형 중 하나 이기도 하고 고민없이 배웠던 기술들을 잘 활용하여 보여 드릴 수 있는 주제 이기도 해서 정하게 되었습니다.</h3>
 <br>
 
-### <h2>아키텍처</h2>
+### <h2>⭐아키텍처</h2>
 <img width="950" alt="아키텍처" src="https://github.com/leedong617/leedong617/assets/133841274/1c97c6b9-56b0-4919-b41d-af54dfa46a98">
 <h3>해당 프로젝트를 push하면 github actions를 통해 gradle로 jar 파일을 build하고 해당 jar파일로 image를 build해 docker hub에 push한 뒤 해당 웹 프로젝트를 docker를 통해 배포중인 ec2서버에서 docker image를 pull하고 실행 중 이던 docker container를 중지시키고 pull한 docker image로 다시 docker container를 실행시켜 자동 배포하는 CI / CD 환경을 구축하였습니다.</h3>
 <h2>ERD</h2>
