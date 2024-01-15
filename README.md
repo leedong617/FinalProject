@@ -66,6 +66,9 @@ JoinCreateMail(String mail)의 반환 받은 데이터를 발송하고 할당된
 <h4>▶️ 이메일 인증 Rest API를 만들어 해당 URI로 요청이 들어오면 이메일 폼 데이터가 mail로 들어오고 해당 mail로 위 과정을 거치게 됩니다. 그 후 랜덤 숫자 5자리를 Stirng으로 변환 한 뒤 json 데이터로 반환합니다. </h4>
 <img width="266" alt="이메일인증ajax" src="https://github.com/leedong617/leedong617/assets/133841274/c22beff0-f23c-4156-9b3b-96eb6ecdf7e3"><br>
 <h3>❗카카오 로그인 </h3>
+<img width="277" alt="오어스 토큰" src="https://github.com/leedong617/leedong617/assets/133841274/4098297b-01b7-4bd2-ab49-6fe738273dd4"><br>
+<img width="353" alt="카카오 프로필" src="https://github.com/leedong617/leedong617/assets/133841274/3eec0b86-1576-4dcf-ae1b-3b71cc05d620"><br>
+<img width="554" alt="카카오 서비스" src="https://github.com/leedong617/leedong617/assets/133841274/f8a4aa8e-61df-4197-8c9b-d614eb668fcd"><br>
 <img width="659" alt="카카오 로그인" src="https://github.com/leedong617/leedong617/assets/133841274/40aeb638-df1c-43ca-809d-d1772ccc4720"><br>
 로그인<br>
 ![로그인](https://github.com/leedong617/leedong617/assets/133841274/a0d16215-ea3f-4a73-9a84-3c563f98efa9)<br>
