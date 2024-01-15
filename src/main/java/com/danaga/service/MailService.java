@@ -61,9 +61,7 @@ public class MailService {
 	// 회원가입 인증 메일 보내기 메소드
 	public int joinSendMail(String mail) {
 
-		MimeMessage message = joinCreateMail(mail);
-
-		javaMailSender.send(message);
+		javaMailSender.send(joinCreateMail(mail));
 		
 		return number;
 	}
@@ -85,8 +83,7 @@ public class MailService {
 	}
 	// 주문번호 이메일 발송
 	public String findOrderIdSendMail(String mail, String orderId) throws Exception {
-		MimeMessage message = orderCreateMail(mail, orderId);
-		javaMailSender.send(message);
+		javaMailSender.send(orderCreateMail(mail, orderId));
 		return orderId;
 	}
 
@@ -116,9 +113,7 @@ public class MailService {
 	// 임시 비밀번호 이메일 발송
 	public String findPassSendMail(String mail) throws Exception {
 
-		MimeMessage message = findPassCreateMail(mail);
-
-		javaMailSender.send(message);
+		javaMailSender.send(findPassCreateMail(mail));
 
 		return randomString;
 	}
@@ -144,9 +139,7 @@ public class MailService {
 	// 찾은 아이디 이메일 발송
 	public String findIdSendMail(String mail) throws Exception {
 
-		MimeMessage message = findIdCreateMail(mail);
-
-		javaMailSender.send(message);
+		javaMailSender.send(findIdCreateMail(mail));
 
 		return memberService.getMemberBy(mail).getUserName();
 	}
