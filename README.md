@@ -1,18 +1,18 @@
 # 03.Final_Project (JAVA, JPA, Oracle) (다나가)
 
-### 프로젝트 소개
+### <h2>*프로젝트 소개</h2>
 수요가 높은 사이트 종류 중 하나인 전자 상거래 사이트 중 다나와를 벤치마킹한 사이트를 제작 하였습니다.
 
-### 개발 기간
+### <h2>*개발 기간</h2>
 총 35일 (2023.10.12 ~ 2023.11.15)
 
-### 담당 파트
+### <h2>*담당 파트</h2>
 | Member |
 |----------|
 | 회원API</br> 로그인</br> 카카오(로그인,주소)</br> 아이디 비밀번호 찾기</br> 이메일 인증</br> |
 
 
-### 개발 환경
+### <h2>*개발 환경</h2>
 
 <img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white"> <img src="https://img.shields.io/badge/Spring Data JPA-6DB33F?style=for-the-badge&logo=spring&logoColor=white"> 
 <img src="https://img.shields.io/badge/Thymeleaf-005F0F?style=for-the-badge&logo=Thymeleaf&logoColor=white"> <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
@@ -24,12 +24,12 @@
 <img src="https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"> <img src="https://img.shields.io/badge/GitHub Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white">
 <br>
 
-### 상세
+### <h2>*상세</h2>
 [어벤져스_발표자료.pdf](https://github.com/leedong617/leedong617/files/13663640/_.pdf)<br>
 <https://github.com/leedong617/FinalProject/> github주소<br>
 다나가 프로젝트 Docker EC2 RDS 배포 <http://3.37.149.223:5000/index>
 <br>
-### 개발 개요
+### <h2>개발 개요</h2>
 <h2>❓왜 전자상거래 사이트를 프로젝트 주제로 삼았는지</h2>
 <img width="487" alt="웹사이트 수요" src="https://github.com/leedong617/leedong617/assets/133841274/aea3a8c9-d294-488c-819c-e2e5b053e124">
 <h2>개발자들에게 있어 뗄레야 뗄 수 없는 GPT선생님께 물어본 결과 수요가 높은 사이트 유형 중 하나 이기도 하고 고민없이 배웠던 기술들을 잘 활용하여 보여 드릴 수 있는 주제 이기도 해서 정하게 되었습니다.</h2>
