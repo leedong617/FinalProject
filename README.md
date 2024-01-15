@@ -46,14 +46,26 @@
 <img width="374" alt="ajax요청" src="https://github.com/leedong617/leedong617/assets/133841274/910a453c-7253-4f6c-9397-92b692a04f9f"><br>
 <img width="239" alt="REST API설명 1" src="https://github.com/leedong617/leedong617/assets/133841274/b82d75e5-576a-415e-9f40-195712dfcbfb"><br>
 <h3>❗이메일 인증 </h3>
+<h4>JavaMailSender API와 Google SMTP를 활용하여 이메일 인증 서비스를 구현하였습니다.</h4>
 <img width="452" alt="이메일인증2" src="https://github.com/leedong617/leedong617/assets/133841274/669e47ea-e42b-43d4-bfc7-252bce2823b5"><br>
 <img width="269" alt="이메일인증3" src="https://github.com/leedong617/leedong617/assets/133841274/7bfb3f02-76ab-44bb-b997-528f6ec9c31a"><br>
 <img width="463" alt="이메일인증4" src="https://github.com/leedong617/leedong617/assets/133841274/0f5d4f28-298c-4c5d-94a9-af12e55d42b2"><br>
+<h4>▶️ 전역 변수 number선언 및 전역 메소드 createNumber() 생성
+createNumber()는 number에 랜덤으로 5자리의 int를 할당합니다.
+</h4>
 <img width="665" alt="이메일인증5" src="https://github.com/leedong617/leedong617/assets/133841274/ca2dffb7-6d4f-49e5-bf04-d74e4234ffb0"><br>
 <img width="479" alt="이메일인증6" src="https://github.com/leedong617/leedong617/assets/133841274/c4b5fe03-f3bf-4281-8d44-60d333ef8310"><br>
+<h4>▶️ JoinCreateMail(String mail)
+createNumber()를 호출해 number를 할당하고 메일의 ‘수신자’와 ‘제목’ ‘내용’을 설정 후 반환합니다.
+</h4>
+<h4>▶️ JoinSendMail(String mail)
+JoinCreateMail(String mail)의 반환 받은 데이터를 발송하고 할당된 전역변수 number를 반환합니다. 
+</h4>
 <img width="328" alt="메일컨트롤러" src="https://github.com/leedong617/leedong617/assets/133841274/77fd4eda-c19c-423e-af9f-70aa8deabb7d"><br>
+<h4>▶️ 이메일 인증 Rest API를 만들어 해당 URI로 요청이 들어오면 이메일 폼 데이터가 mail로 들어오고 해당 mail로 위 과정을 거치게 됩니다. 그 후 랜덤 숫자 5자리를 Stirng으로 변환 한 뒤 json 데이터로 반환합니다. </h4>
 <img width="266" alt="이메일인증ajax" src="https://github.com/leedong617/leedong617/assets/133841274/c22beff0-f23c-4156-9b3b-96eb6ecdf7e3"><br>
 <h3>❗카카오 로그인 </h3>
+<img width="659" alt="카카오 로그인" src="https://github.com/leedong617/leedong617/assets/133841274/40aeb638-df1c-43ca-809d-d1772ccc4720"><br>
 로그인<br>
 ![로그인](https://github.com/leedong617/leedong617/assets/133841274/a0d16215-ea3f-4a73-9a84-3c563f98efa9)<br>
 카카오로그인<br>
