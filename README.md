@@ -42,7 +42,7 @@
 <h2>⭐주요 기능</h2>
 <img width="671" alt="스크린샷 2023-12-14 011833" src="https://github.com/leedong617/leedong617/assets/133841274/72517656-e00e-449d-9fb5-3a142f06a99a"><br>
 <h3>❗Rest API </h3>
-<img width="698" alt="rest api 코드" src="https://github.com/leedong617/leedong617/assets/133841274/209f9d11-2b0a-4b83-adc2-db52e2b70e98"><br>
+<img width="800" alt="rest api 코드" src="https://github.com/leedong617/leedong617/assets/133841274/209f9d11-2b0a-4b83-adc2-db52e2b70e98"><br>
 <img width="374" alt="ajax요청" src="https://github.com/leedong617/leedong617/assets/133841274/910a453c-7253-4f6c-9397-92b692a04f9f"><br>
 <img width="239" alt="REST API설명 1" src="https://github.com/leedong617/leedong617/assets/133841274/b82d75e5-576a-415e-9f40-195712dfcbfb"><br>
 <h3>❗RestController를 사용하여 회원 Rest API를 구축 하였습니다.<br><br>
