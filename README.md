@@ -26,7 +26,7 @@
 ### <h2>⭐상세</h2>
 [어벤져스_발표자료.pdf](https://github.com/leedong617/leedong617/files/13663640/_.pdf)<br>
 <https://github.com/leedong617/FinalProject/> github주소<br>
-다나가 프로젝트 Docker EC2 RDS 배포 <http://3.37.149.223:5000/index>
+<http://3.37.149.223:5000/index>다나가 프로젝트 Docker EC2 RDS 배포 
 <br>
 ### <h2>⭐개발 개요</h2>
 <h2>❓왜 전자상거래 사이트를 프로젝트 주제로 삼았는지</h2>
