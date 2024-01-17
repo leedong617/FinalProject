@@ -74,8 +74,8 @@
 							<hr class="mt-2 mb-3">
 							<div class="col-12 text-center text-sm-right">
 								<div class="custom-control custom-checkbox d-block"></div>
-								<button class="btn-account-profile-update btn btn-primary margin-right-none" th:if="${session.role == 'Kakao'}" id="mergy_account" type="button" onclick="window.location.href = '/member_join_form_kakao';">카카오 통합</button>
-								<button class="btn-account-profile-update btn btn-primary margin-right-none" id="quit_btn" type="button" onclick="window.location.href = '/member_quit_form';">회원탈퇴</button>
+								<button class="btn-account-profile-update btn btn-primary margin-right-none" th:if="${session.role == 'Kakao'}" id="mergy_account" type="button" onclick="window.location.href = '/member-join-form-kakao';">카카오 통합</button>
+								<button class="btn-account-profile-update btn btn-primary margin-right-none" id="quit_btn" type="button" onclick="window.location.href = '/member-quit-form';">회원탈퇴</button>
 								<button class="btn-account-profile-update btn btn-primary margin-right-none" id="modify_action_btn" type="button">수정하기</button>
 							</div>
 						</div>
@@ -97,10 +97,10 @@
 				}
 				return false;
 			}
-		/***************프로필변경 [/member/modify_action_rest]******* */
+		/***************프로필변경 [/member/modify-action-rest]******* */
 		let member_modify_action_rest=function(data){
 			$.ajax({
-					url:'/member/modify_action_rest',
+					url:'/member/modify-action-rest',
     				method:'PUT',
     				data:JSON.stringify(data),
     				dataType: "json",

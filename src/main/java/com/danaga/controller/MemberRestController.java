@@ -46,7 +46,7 @@ public class MemberRestController {
 	private final CartService cartService;
 	private final RecentViewService recentViewService;
 	//아이디 찾기
-	@PostMapping(value = "/findid_rest", produces = "application/json;charset=UTF-8")
+	@PostMapping(value = "/findid-rest", produces = "application/json;charset=UTF-8")
 	public Map member_findid_action_rest(@RequestBody MemberFindDto memberFindDto, HttpSession session)
 			throws Exception {
 		HashMap map = new HashMap<>();
@@ -67,7 +67,7 @@ public class MemberRestController {
 		return map;
 	}
 	// 비밀번호 찾기
-	@PostMapping(value = "/findpass_rest", produces = "application/json;charset=UTF-8")
+	@PostMapping(value = "/findpass-rest", produces = "application/json;charset=UTF-8")
 	public Map member_findpass_action_rest(@RequestBody MemberFindDto memberFindDto, HttpSession session)
 			throws Exception {
 		HashMap map = new HashMap<>();
@@ -94,7 +94,7 @@ public class MemberRestController {
 	}
 	// 로그인
 	@Transactional
-	@PostMapping(value = "/login_rest", produces = "application/json;charset=UTF-8")
+	@PostMapping(value = "/login-rest", produces = "application/json;charset=UTF-8")
 	public Map member_login_action_rest(@RequestBody MemberLoginDto memberLoginDto, HttpSession session)
 			throws Exception {
 		HashMap map = new HashMap<>();
@@ -151,7 +151,7 @@ public class MemberRestController {
 		return map;
 	}
 	// 회원가입
-	@PostMapping("/join_rest")
+	@PostMapping
 	public Map member_join_action(@RequestBody MemberResponseDto memberResponseDto) throws Exception {
 		HashMap map = new HashMap<>();
 		int result = 5;
@@ -184,7 +184,7 @@ public class MemberRestController {
 	}
 	// 카카오 회원을 사이트회원으로 전환
 	@Transactional
-	@PostMapping("/join_rest_kakao")
+	@PostMapping("/join-rest-kakao")
 	public Map member_join_action_kakao(@RequestBody MemberResponseDto memberResponseDto, HttpSession session) throws Exception {
 		HashMap map = new HashMap<>();
 		// MemberResponseDto memberResponseDto =
@@ -216,7 +216,7 @@ public class MemberRestController {
 	}
 	// 회원 정보 수정
 	@LoginCheck
-	@PutMapping(value = "/modify_action_rest", produces = "application/json;charset=UTF-8")
+	@PutMapping(value = "/modify-action-rest", produces = "application/json;charset=UTF-8")
 	public Map member_modify_action(@RequestBody MemberUpdateDto memberUpdateDto, HttpSession session)
 			throws Exception {
 		HashMap map = new HashMap<>();
@@ -237,7 +237,7 @@ public class MemberRestController {
 	}
 	// 회원탈퇴
 	@LoginCheck
-	@DeleteMapping(value = "/delete_action_rest", produces = "application/json;charset=UTF-8")
+	@DeleteMapping(value = "/delete-action-rest", produces = "application/json;charset=UTF-8")
 	public Map delete_action_rest(@RequestBody MemberLoginDto memberLoginDto, HttpSession session) throws Exception {
 		HashMap map = new HashMap<>();
 		int result = 2;

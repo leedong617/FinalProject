@@ -51,9 +51,9 @@
 							<i class="icon-open"></i>
 						</div>
 						<div class="account">
-							<a th:if="${session.sUserId != null}" th:href="@{/member_info_form}"></a>
+							<a th:if="${session.sUserId != null}" th:href="@{/member-info-form}"></a>
 							<!-- Thymeleaf 조건문을 사용하여 sUserId가 null인 경우 로그인 페이지로 이동 -->
-							<a th:if="${session.sUserId == null}" th:href="@{/member_login_form}"></a><i
+							<a th:if="${session.sUserId == null}" th:href="@{/member-login-form}"></a><i
 								class="icon-head"></i>
 							<ul th:if="${session.sUserId != null}" class="toolbar-dropdown">
 								<li class="sub-menu-user">
@@ -62,12 +62,12 @@
 										<h6 class="user-name"></h6>
 									</div>
 								</li>
-								<li><a href="/member_info_form">내 정보</a></li>
+								<li><a href="/member-info-form">내 정보</a></li>
 								<li><a href="/recentview">최근 본 상품</a></li>
 								<li><a href="/wishlist">관심 상품</a></li>
 								<li><a href="/member_order_List">주문 목록</a></li>
 								<li class="sub-menu-separator"></li>
-								<li><a href="/member_logout_action"> <i class="icon-unlock"></i>로그아웃
+								<li><a href="/member-logout-action"> <i class="icon-unlock"></i>로그아웃
 									</a></li>
 							</ul>
 							<ul th:if="${session.sUserId == null}" class="toolbar-dropdown">
@@ -77,8 +77,8 @@
 										<h6 class="user-name"></h6>
 									</div>
 								</li>
-								<li><a href="/member_login_form">로그인</a></li>
-								<li><a href="/member_join_form">회원가입</a></li>
+								<li><a href="/member-login-form">로그인</a></li>
+								<li><a href="/member-join-form">회원가입</a></li>
 							</ul>
 						</div>
 						<div class="cart">

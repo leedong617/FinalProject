@@ -26,10 +26,10 @@
               <div class="d-flex flex-wrap justify-content-end padding-bottom-1x">
                 <div class="custom-control custom-checkbox">
                   <input class="custom-control-input" type="checkbox" id="join_form" checked>
-                </div><a class="navi-link" href="/member_join_form">회원가입</a>
+                </div><a class="navi-link" href="/member-join-form">회원가입</a>
                 <div class="custom-control custom-checkbox">
                   <input class="custom-control-input" type="checkbox" id="find_password" checked>
-                </div><a class="navi-link" href="/member_find_password_form">아이디/비밀번호 찾기</a>
+                </div><a class="navi-link" href="/member-find-password-form">아이디/비밀번호 찾기</a>
               </div>
               <div class="text-center text-sm-right">
                 <button class="btn btn-primary margin-bottom-none" type="submit" id="login-action-btn">로그인</button>
@@ -42,7 +42,7 @@
    <script type="text/javascript">
 	var account_login_action_rest=function(data){
 			$.ajax({
-    				url:'/member/login_rest',
+    				url:'/member/login-rest',
     				method:'POST',
     				data:JSON.stringify(data),
     				dataType: "json",

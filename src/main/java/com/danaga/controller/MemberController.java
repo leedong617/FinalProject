@@ -17,50 +17,50 @@ public class MemberController {
 	@Autowired
 	private MemberService memberService;
 
-	@GetMapping("/member_login_form")
+	@GetMapping("/member-login-form")
 	public String member_login_form() {
 		return "member/member_login_form";
 	}
 
 
-	@GetMapping("/member_join_form")
+	@GetMapping("/member-join-form")
 	public String member_join_form() {
-		return "member/member_join_form";
+		return "member/member-join-form";
 	}
-	@GetMapping("/member_join_complete_page")
+	@GetMapping("/member-join-complete-page")
 	public String member_join_complete_page() {
-		return "member/member_join_complete_page";
+		return "member/member-join-complete-page";
 	}
 
-	@GetMapping("/member_find_password_form")
+	@GetMapping("/member-find-password-form")
 	public String member_findpassword_form() {
-		return "member/member_find_id_password_form";
+		return "member/member-find-id-password-form";
 	}
 
 	@LoginCheck
-	@GetMapping("/member_info_form")
+	@GetMapping("/member-info-form")
 	public String member_info_form(HttpSession session, Model model) throws Exception {
 		/************** login check **************/
 		/****************************************/
 		String loginUser = (String) session.getAttribute("sUserId");
 		MemberResponseDto member = memberService.getMemberBy(loginUser);
 		model.addAttribute("loginUser", member);
-		return "member/member_info_form";
+		return "member/member-info-form";
 	}
 	@LoginCheck
-	@GetMapping("/member_join_form_kakao")
+	@GetMapping("/member-join-form-kakao")
 	public String member_join_form_kakao(HttpSession session, Model model) throws Exception {
 		/************** login check **************/
 		/****************************************/
 		String loginUser = (String) session.getAttribute("sUserId");
 		MemberResponseDto member = memberService.getMemberBy(loginUser);
 		model.addAttribute("loginUser", member);
-		return "member/member_join_form_kakao";
+		return "member/member-join-form-kakao";
 	}
 
 
 	@LoginCheck
-	@GetMapping("/member_logout_action")
+	@GetMapping("/member-logout-action")
 	public String member_logout_action(HttpSession session) {
 		/************** login check **************/
 		/****************************************/
@@ -69,14 +69,14 @@ public class MemberController {
 		return "redirect:index";
 	}
 	@LoginCheck
-	@GetMapping("/member_quit_form")
+	@GetMapping("/member-quit-form")
 	public String member_quit_form() {
 		
-		return "member/member_quit";
+		return "member/member-quit";
 	}
 
 
-	@GetMapping({ "/member_join_action", "/member_login_action", "/member_modify_action", "/member_remove_action" })
+	@GetMapping({ "/member-join-action", "/member-login-action", "/member-modify-action", "/member-remove-action" })
 	public String user_get() {
 		return "redirect:/index";
 	}

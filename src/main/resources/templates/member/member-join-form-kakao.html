@@ -114,7 +114,7 @@ function isNoValidPassword(password) {
 }
 let member_join_action_rest=function(data){
 		$.ajax({
-				url:'/member/join_rest_kakao',
+				url:'/member/join-rest-kakao',
 				method:'POST',
 				data:JSON.stringify(data),
 				dataType:'json',
@@ -135,7 +135,7 @@ let member_join_action_rest=function(data){
 					    $('#reg-nickname').tooltip('dispose');
 					    }, 2000);
 					} else {
-						location.href="/member_join_complete_page";
+						location.href="/member-join-complete-page";
 		   			}
 				},
 				error:function(){

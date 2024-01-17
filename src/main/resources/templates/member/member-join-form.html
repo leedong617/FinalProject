@@ -150,7 +150,7 @@ let member_join_action_rest=function(data){
 		//이메일 인증 성공시
 		if(emailCheck) {
 		$.ajax({
-				url:'/member/join_rest',
+				url:'/member',
 				method:'POST',
 				data:JSON.stringify(data),
 				dataType:'json',
@@ -197,7 +197,7 @@ let member_join_action_rest=function(data){
 					    }, 2000);
 					} else {
 						//회원가입 성공 후 회원가입 완료 페이지 이동
-						location.href="/member_join_complete_page";
+						location.href="/member-join-complete-page";
 		   			}
 				},
 				error:function(){
