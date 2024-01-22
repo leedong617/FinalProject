@@ -35,7 +35,7 @@
 <br>
 
 ## ⭐아키텍처
-<img width="950" alt="아키텍처" src="https://github.com/leedong617/leedong617/assets/133841274/1c97c6b9-56b0-4919-b41d-af54dfa46a98">
+<img width="950" alt="아키텍처" src="https://github.com/leedong617/leedong617/assets/133841274/bdf3b1d2-01b3-45fd-bc61-9b184feb0271">
 <h3>>> 해당 프로젝트를 push하면 github actions를 통해 gradle로 jar 파일을 build하고 해당 jar파일로 docker image를 만들어 docker hub에 push한 뒤 해당 웹 프로젝트를 docker를 통해 배포중인 ec2서버에서 docker image를 pull하고 실행 중 이던 docker container를 중지시키고 pull한 docker image로 다시 docker container를 실행시켜 자동 배포하는 CI / CD 환경을 구축하였습니다.</h3>
 <h2>⭐ERD</h2>
 <img width="1091" alt="ERD" src="https://github.com/leedong617/leedong617/assets/133841274/355a601b-7b3e-41ab-9fa1-a0571267f4cb">
