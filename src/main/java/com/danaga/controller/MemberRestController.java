@@ -30,7 +30,6 @@ import com.danaga.exception.MemberNotFoundException;
 import com.danaga.exception.PasswordMismatchException;
 import com.danaga.service.CartService;
 import com.danaga.service.MemberService;
-import com.danaga.service.product.OptionSetService;
 import com.danaga.service.product.RecentViewService;
 
 import jakarta.servlet.http.HttpSession;

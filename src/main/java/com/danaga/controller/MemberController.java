@@ -4,6 +4,7 @@ package com.danaga.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.danaga.dto.MemberResponseDto;
@@ -19,7 +20,7 @@ public class MemberController {
 
 	@GetMapping("/member-login-form")
 	public String member_login_form() {
-		return "member/member_login_form";
+		return "member/member-login-form";
 	}
 
 
@@ -78,7 +79,6 @@ public class MemberController {
 
 	@GetMapping({ "/member-join-action", "/member-login-action", "/member-modify-action", "/member-remove-action" })
 	public String user_get() {
-		return "redirect:/index";
+		return "redirect:index";
 	}
-
 }
