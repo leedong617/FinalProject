@@ -9,7 +9,13 @@
 ## ⭐담당 파트
 | Member |
 |----------|
-| 회원API</br> 로그인</br> 카카오(로그인,주소)</br> 아이디 비밀번호 찾기</br> 이메일 인증</br> |
+| 회원API(회원가입,탈퇴,수정,로그인,찾기)</br> 카카오(로그인,주소)</br> 이메일 인증</br> |
+### 🙋‍♂️ 멤버 구성
+| [이동현 ](https://github.com/leedong617) <br> *(Member)*  | [최유강](https://github.com/choliea) <br> *(Product)* | [이승현](https://github.com/lsh96900410) <br> *(Cart)* | [임범준](https://github.com/beomjun10) <br> *(Cart)* |
+| :------: |  :------: | :------: | :------: |
+| - 회원API (회원가입,탈퇴,수정,로그인,찾기)<br> -포인트 등급제 <br> - 카카오API <br> (지도/로그인) <br> - 이메일 인증 API |- 리스트 <br> - 상세페이지 <br> - 카테고리/옵션 검색 <br> - 관심상품/최근본상품 | - 장바구니 <br> - 옵션변경 <br> - 선택주문 | - 선택삭제 <br> - 비회원 장바구니 |
+| [**권경록**](https://github.com/kkr95101) <br> *(Order)*  | [**박재찬**](https://github.com/ykmr0331) <br> *(Delivery)*  | [**김아론**](https://github.com/aronkim92) <br> *(Board)* | [**이현승**](https://github.com/roco-lee) <br> *(Admin, 팀장)* |
+| - 주문처리 <br> - 비회원 주문 <br> 주문번호 이메일 발송  | - 주문목록 <br> 배송상태 조회/변경 <br> - 환불/취소 <br> - 비회원 주문조회   | - 게시판 <br> - 작성, 수정, 삭제 <br> - 댓글, 좋아요 <br> - 인기글 <br> - 에디터 기능 <br> - 페이징/검색 | - 사이트 통계 <br> - 엑셀 다운로드 <br> - 제품 등록/삭제 <br> - 주문상태 변경 <br> - 회원/게시글 삭제 |
 
 
 ## ⭐개발 환경
