@@ -67,10 +67,7 @@ JoinCreateMail(String mail)의 반환 받은 데이터를 발송하고 할당된
 <h3>>> 이메일 인증 Rest API를 만들어 해당 URI로 요청이 들어오면 이메일 폼 데이터가 mail로 들어오고 해당 mail로 위 과정을 거치게 됩니다. 그 후 랜덤 숫자 5자리를 Stirng으로 변환 한 뒤 json 데이터로 반환합니다. </h3>
 <img width="266" alt="이메일인증ajax" src="https://github.com/leedong617/leedong617/assets/133841274/c22beff0-f23c-4156-9b3b-96eb6ecdf7e3"><br>
 <h2>3️⃣ 카카오 로그인 </h2>
-<img width="277" alt="오어스 토큰" src="https://github.com/leedong617/leedong617/assets/133841274/4098297b-01b7-4bd2-ab49-6fe738273dd4"><br>
-<img width="353" alt="카카오 프로필" src="https://github.com/leedong617/leedong617/assets/133841274/3eec0b86-1576-4dcf-ae1b-3b71cc05d620"><br>
-<img width="554" alt="카카오 서비스" src="https://github.com/leedong617/leedong617/assets/133841274/f8a4aa8e-61df-4197-8c9b-d614eb668fcd"><br>
-<img width="659" alt="카카오 로그인" src="https://github.com/leedong617/leedong617/assets/133841274/40aeb638-df1c-43ca-809d-d1772ccc4720"><br>
+<img width="628" alt="카카오 로그인2024-02-29 012852" src="https://github.com/leedong617/leedong617/assets/133841274/1d98a7e6-2216-493d-a5c4-2f6c7fabfa3f">
 <h3>❗KakaoController와 KakaoService, KakaoProfile을 만들어
 Kakao에서 보낸 code로 인증 토큰을 생성하고 생성된 토큰을 사용하여 KakaoProfile을 가져옵니다.
 회원의 이메일에는 Unique설정되어있으며 KakaoProfile에서 가져온 이메일이 DB에 존재한다면 해당 이메일을 가진 회원으로 로그인이 진행되며 
@@ -78,3 +75,7 @@ Kakao에서 보낸 code로 인증 토큰을 생성하고 생성된 토큰을 사
 </h3>
 
 ## ⭐트러블슈팅
+### 순환참조
+개요 : Member REST API를 Swagger로 테스트 하던중 순환참조 에러가 발생하였다.
+원인 : JPA를 사용해 Entity간 1:N 양방향 맵핑이 되있고 Entity를 그대로 반환할 경우 무한 참조가 발생하여 StackOverFlow가 난다.
+해결 방법 : 많은 방법들이 있었지만 DTO를 만들어 반환하는 방법을 채택했다. DTO는 필요한 데이터만 담기 때문에 순환참조를 애초에 예방할 수 있다.
