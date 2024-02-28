@@ -9,7 +9,7 @@
 ## ⭐담당 파트
 | Member |
 |----------|
-| 회원API(회원가입,탈퇴,수정,로그인,찾기)</br> 카카오(로그인,주소)</br> 이메일 인증</br> |
+| 회원API(회원가입,탈퇴,수정,로그인,찾기)</br> 카카오(로그인,주소)</br> 이메일 인증 API</br> 포인트 등급제 <br>|
 ### 🙋‍♂️ 멤버 구성
 | [이동현 ](https://github.com/leedong617) <br> *(Member)*  | [최유강](https://github.com/choliea) <br> *(Product)* | [이승현](https://github.com/lsh96900410) <br> *(Cart)* | [임범준](https://github.com/beomjun10) <br> *(Cart)* |
 | :------: |  :------: | :------: | :------: |
