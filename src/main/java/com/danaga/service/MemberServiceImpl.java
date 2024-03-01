@@ -27,7 +27,7 @@ import jakarta.transaction.Transactional;
 
 @Service
 public class MemberServiceImpl implements MemberService {
-
+	
 	@Autowired
 	private MemberDao memberDao;
 
