@@ -77,7 +77,7 @@ public class KaKaoController {
 				session.setAttribute("sUserId", kakaoUserEmail);
 				session.setAttribute("role",kakaoMember.getRole());
 				System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 카카오" +session.getAttribute("sUserId"));
-				return "redirect:/member_join_complete_page";
+				return "redirect:/member-join-complete-page";
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
