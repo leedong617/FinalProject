@@ -9,7 +9,13 @@
 ## ⭐담당 파트
 | Member |
 |----------|
-| 회원API</br> 로그인</br> 카카오(로그인,주소)</br> 아이디 비밀번호 찾기</br> 이메일 인증</br> |
+| 회원API(회원가입,탈퇴,수정,로그인,찾기)</br> 카카오(로그인,주소)</br> 이메일 인증 API</br> 포인트 등급제 <br>|
+### 🙋‍♂️ 멤버 구성
+| [이동현 ](https://github.com/leedong617) <br> *(Member)*  | [최유강](https://github.com/choliea) <br> *(Product)* | [이승현](https://github.com/lsh96900410) <br> *(Cart)* | [임범준](https://github.com/beomjun10) <br> *(Cart)* |
+| :------: |  :------: | :------: | :------: |
+| - 회원API <br>(회원가입,탈퇴,수정,로그인,찾기)<br> -포인트 등급제 <br> - 카카오API <br> (지도/로그인) <br> - 이메일 인증 API |- 리스트 <br> - 상세페이지 <br> - 카테고리/옵션 검색 <br> - 관심상품/최근본상품 | - 장바구니 <br> - 옵션변경 <br> - 선택주문 | - 선택삭제 <br> - 비회원 장바구니 |
+| [**권경록**](https://github.com/kkr95101) <br> *(Order)*  | [**박재찬**](https://github.com/ykmr0331) <br> *(Delivery)*  | [**김아론**](https://github.com/aronkim92) <br> *(Board)* | [**이현승**](https://github.com/roco-lee) <br> *(Admin, 팀장)* |
+| - 주문처리 <br> - 비회원 주문 <br> 주문번호 이메일 발송  | - 주문목록 <br> 배송상태 조회/변경 <br> - 환불/취소 <br> - 비회원 주문조회   | - 게시판 <br> - 작성, 수정, 삭제 <br> - 댓글, 좋아요 <br> - 인기글 <br> - 에디터 기능 <br> - 페이징/검색 | - 사이트 통계 <br> - 엑셀 다운로드 <br> - 제품 등록/삭제 <br> - 주문상태 변경 <br> - 회원/게시글 삭제 |
 
 
 ## ⭐개발 환경
@@ -20,18 +26,13 @@
 <img src="https://img.shields.io/badge/Bootstrap 4-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white"> <img src="https://img.shields.io/badge/gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white"> 
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
 <img src="https://img.shields.io/badge/amazon ec2-FF9900?style=for-the-badge&logo=amazonec2&logoColor=white"> <img src="https://img.shields.io/badge/amazon rds-527FFF?style=for-the-badge&logo=amazonrds&logoColor=white">
-<img src="https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"> <img src="https://img.shields.io/badge/GitHub Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white"> <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> For deployment <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white"> For development
+<img src="https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"> <img src="https://img.shields.io/badge/GitHub Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white"><br> <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> For deployment <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white"> For development
 <br>
 
 ## ⭐상세
 [어벤져스_발표자료.pdf](https://github.com/leedong617/leedong617/files/13663640/_.pdf)<br>
 <https://github.com/leedong617/FinalProject/> github주소<br>
-<http://3.37.149.223:5000/index> 다나가 프로젝트 Docker EC2 RDS 배포
-<br>
-## ⭐개발 개요
-<h2>❓왜 전자상거래 사이트를 프로젝트 주제로 삼았는지</h2>
-<img width="487" alt="웹사이트 수요" src="https://github.com/leedong617/leedong617/assets/133841274/aea3a8c9-d294-488c-819c-e2e5b053e124">
-<h3>>> 개발자들에게 있어 뗄레야 뗄 수 없는 GPT선생님께 물어본 결과 수요가 높은 사이트 유형 중 하나 이기도 하고 고민없이 배웠던 기술들을 잘 활용하여 보여 드릴 수 있는 주제 이기도 해서 정하게 되었습니다.</h3>
+<http://15.164.165.135:5000/index> 다나가 프로젝트 Docker EC2 RDS 배포
 <br>
 
 ## ⭐아키텍처
@@ -66,34 +67,15 @@ JoinCreateMail(String mail)의 반환 받은 데이터를 발송하고 할당된
 <h3>>> 이메일 인증 Rest API를 만들어 해당 URI로 요청이 들어오면 이메일 폼 데이터가 mail로 들어오고 해당 mail로 위 과정을 거치게 됩니다. 그 후 랜덤 숫자 5자리를 Stirng으로 변환 한 뒤 json 데이터로 반환합니다. </h3>
 <img width="266" alt="이메일인증ajax" src="https://github.com/leedong617/leedong617/assets/133841274/c22beff0-f23c-4156-9b3b-96eb6ecdf7e3"><br>
 <h2>3️⃣ 카카오 로그인 </h2>
-<img width="277" alt="오어스 토큰" src="https://github.com/leedong617/leedong617/assets/133841274/4098297b-01b7-4bd2-ab49-6fe738273dd4"><br>
-<img width="353" alt="카카오 프로필" src="https://github.com/leedong617/leedong617/assets/133841274/3eec0b86-1576-4dcf-ae1b-3b71cc05d620"><br>
-<img width="554" alt="카카오 서비스" src="https://github.com/leedong617/leedong617/assets/133841274/f8a4aa8e-61df-4197-8c9b-d614eb668fcd"><br>
-<img width="659" alt="카카오 로그인" src="https://github.com/leedong617/leedong617/assets/133841274/40aeb638-df1c-43ca-809d-d1772ccc4720"><br>
+<img width="628" alt="카카오 로그인2024-02-29 012852" src="https://github.com/leedong617/leedong617/assets/133841274/1d98a7e6-2216-493d-a5c4-2f6c7fabfa3f">
 <h3>❗KakaoController와 KakaoService, KakaoProfile을 만들어
 Kakao에서 보낸 code로 인증 토큰을 생성하고 생성된 토큰을 사용하여 KakaoProfile을 가져옵니다.
 회원의 이메일에는 Unique설정되어있으며 KakaoProfile에서 가져온 이메일이 DB에 존재한다면 해당 이메일을 가진 회원으로 로그인이 진행되며 
 존재하지 않는다면 MemberNotFoundException 발생하여 KakaoProfile을 사용하여 회원가입이 진행됩니다.
 </h3>
 
-## ⭐UI 화면
-로그인<br>
-<img width="500" alt="찾기" src="https://github.com/leedong617/leedong617/assets/133841274/b160eecc-5549-4926-960d-ed1ee9d9b06e"><br>
-카카오로그인<br>
-<img width="500" alt="카카오로그인1" src="https://github.com/leedong617/leedong617/assets/133841274/1eb64bd0-3211-4483-95e3-fa5d487f4901"><br>
-카카오로그인2<br>
-<img width="500" alt="카카오로그인2" src="https://github.com/leedong617/leedong617/assets/133841274/48eae22a-5d4b-4f53-a582-8b05a7e8bbc6"><br>
-카카오로그인3<br>
-<img width="500" alt="카카오로그인3" src="https://github.com/leedong617/leedong617/assets/133841274/d310082a-ab5d-4e38-8341-ea1de23c2090"><br>
-회원가입<br>
-<img width="500" alt="회원가입 " src="https://github.com/leedong617/leedong617/assets/133841274/ebf862d7-4976-4b17-8faf-583c4894e24d"><br>
-회원가입완료<br>
-<img width="500" alt="회원가입완료 " src="https://github.com/leedong617/leedong617/assets/133841274/1cc305f3-a7fe-47f5-b347-99e7e32090ba"><br>
-마이페이지<br>
-<img width="500" alt="마이페이지 " src="https://github.com/leedong617/leedong617/assets/133841274/aa7b6338-4474-4127-bc64-1138558bbfe4"><br>
-수정<br>
-<img width="500" alt="수정" src="https://github.com/leedong617/leedong617/assets/133841274/2333e128-4f66-4d20-a62b-96de2e87d8f6"><br>
-찾기<br>
-<img width="500" alt="찾기" src="https://github.com/leedong617/leedong617/assets/133841274/b160eecc-5549-4926-960d-ed1ee9d9b06e"><br>
-탈퇴<br>
-<img width="500" alt="탈퇴 " src="https://github.com/leedong617/leedong617/assets/133841274/9cd22192-3917-439e-9ab9-c4ef8edbd1c0"><br>
+## ⭐트러블슈팅
+### 순환참조
+개요 : Member REST API를 Swagger로 테스트 하던중 순환참조 에러가 발생하였다.<br>
+원인 : JPA를 사용해 Entity간 1:N 양방향 맵핑이 되있고 Entity를 그대로 반환할 경우 무한 참조가 발생하여 StackOverFlow가 난다.<br>
+해결 방법 : 많은 방법들이 있었지만 DTO를 만들어 반환하는 방법을 채택했다. DTO는 필요한 데이터만 담기 때문에 순환참조를 애초에 예방할 수 있다.<br>
