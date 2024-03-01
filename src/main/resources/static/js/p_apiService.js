@@ -23,7 +23,7 @@ function call(api, method, request) {
 			return response.json();
 		} else if (response.status === 401) {
 			alert('로그인이 필요한 서비스입니다.');
-			window.location.href = "/member_login_form";// redirect
+			window.location.href = "/member-login-form";// redirect
 		} else if (response.stataus === 404) {
 			window.location.href = "/404.html";
 		} else if (response.msg == 'WRONG_PARAMETER') {
