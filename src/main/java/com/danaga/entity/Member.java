@@ -70,7 +70,9 @@ public class Member {
 				.password(memberResponseDto.getPassword()).email(memberResponseDto.getEmail()).name(memberResponseDto.getName())
 				.nickname(memberResponseDto.getNickname()).address(memberResponseDto.getAddress()).phoneNo(memberResponseDto.getPhoneNo())
 				.joinDate(memberResponseDto.getJoinDate()).role(memberResponseDto.getRole()).grade(memberResponseDto.getGrade())
-				.gradePoint(memberResponseDto.getGradePoint()).build();
+				.gradePoint(memberResponseDto.getGradePoint()).detailAddress(memberResponseDto.getDetailAddress())
+				.birthday(memberResponseDto.getBirthday()).postCode(memberResponseDto.getPostCode()).role(memberResponseDto.getRole())
+				.build();
 	}
 
 	public static Member toUpdateEntity(MemberUpdateDto memberUpdateDto) {

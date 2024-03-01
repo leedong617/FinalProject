@@ -4,7 +4,6 @@ package com.danaga.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.danaga.dto.MemberResponseDto;
@@ -33,7 +32,7 @@ public class MemberController {
 		return "member/member-join-complete-page";
 	}
 
-	@GetMapping("/member-find-password-form")
+	@GetMapping("/member-find-id-password-form")
 	public String member_findpassword_form() {
 		return "member/member-find-id-password-form";
 	}

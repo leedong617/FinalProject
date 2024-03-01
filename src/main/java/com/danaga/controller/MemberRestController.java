@@ -154,7 +154,7 @@ public class MemberRestController {
 	public Map member_join_action(@RequestBody MemberResponseDto memberResponseDto) throws Exception {
 		HashMap map = new HashMap<>();
 		int result = 5;
-
+		memberResponseDto.setRole("Member");
 		try {
 			memberService.joinMember(Member.toResponseEntity(memberResponseDto));
 		} catch (ExistedMemberByUserNameException e) {
