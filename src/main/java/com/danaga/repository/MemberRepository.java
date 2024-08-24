@@ -8,9 +8,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.danaga.entity.Member;
 
 public interface MemberRepository extends JpaRepository<Member, Long> {
-	public Optional<Member> findByUserName(String MemberId);
-	public Optional<Member> findByEmail(String MemberEmail);
-	public Optional<Member> findByPhoneNo(String MemberPhoneNo);
-	public Optional<Member> findByNickname(String nickname);
+	Optional<Member> findByUserName(String MemberId);
+	Optional<Member> findByEmail(String MemberEmail);
+	Optional<Member> findByPhoneNo(String MemberPhoneNo);
+	Optional<Member> findByNickname(String nickname);
 	
 }

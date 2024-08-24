@@ -47,7 +47,7 @@ public class MemberRestController {
     private final RecentViewService recentViewService;
 
     @PostMapping(value = "/findid-rest", produces = "application/json;charset=UTF-8")
-    public ResponseEntity<Map<String, Object>> member_findid_action_rest(@RequestBody MemberFindDto memberFindDto, HttpSession session) throws Exception {
+    public ResponseEntity<?> member_findid_action_rest(@RequestBody MemberFindDto memberFindDto, HttpSession session) throws Exception {
         HashMap<String, Object> map = new HashMap<>();
         int result = 1;
 
@@ -65,7 +65,7 @@ public class MemberRestController {
     }
 
     @PostMapping(value = "/findpass-rest", produces = "application/json;charset=UTF-8")
-    public ResponseEntity<Map<String, Object>> member_findpass_action_rest(@RequestBody MemberFindDto memberFindDto, HttpSession session) throws Exception {
+    public ResponseEntity<?> member_findpass_action_rest(@RequestBody MemberFindDto memberFindDto, HttpSession session) throws Exception {
         HashMap<String, Object> map = new HashMap<>();
         int result = 2;
 
@@ -89,7 +89,7 @@ public class MemberRestController {
 
     @Transactional
     @PostMapping(value = "/login-rest", produces = "application/json;charset=UTF-8")
-    public ResponseEntity<Map<String, Object>> member_login_action_rest(@RequestBody MemberLoginDto memberLoginDto, HttpSession session) throws Exception {
+    public ResponseEntity<?> member_login_action_rest(@RequestBody MemberLoginDto memberLoginDto, HttpSession session) throws Exception {
         HashMap<String, Object> map = new HashMap<>();
         int result = 2;
 
@@ -142,7 +142,7 @@ public class MemberRestController {
     }
 
     @PostMapping
-    public ResponseEntity<Map<String, Object>> member_join_action(@RequestBody MemberResponseDto memberResponseDto) throws Exception {
+    public ResponseEntity<?> member_join_action(@RequestBody MemberResponseDto memberResponseDto) throws Exception {
         HashMap<String, Object> map = new HashMap<>();
         int result = 5;
         memberResponseDto.setRole("Member");
@@ -177,7 +177,7 @@ public class MemberRestController {
 
     @Transactional
     @PostMapping("/join-rest-kakao")
-    public ResponseEntity<Map<String, Object>> member_join_action_kakao(@RequestBody MemberResponseDto memberResponseDto, HttpSession session) throws Exception {
+    public ResponseEntity<?> member_join_action_kakao(@RequestBody MemberResponseDto memberResponseDto, HttpSession session) throws Exception {
         HashMap<String, Object> map = new HashMap<>();
         int result = 3;
         try {
@@ -206,7 +206,7 @@ public class MemberRestController {
 
     @LoginCheck
     @PutMapping(value = "/modify-action-rest", produces = "application/json;charset=UTF-8")
-    public ResponseEntity<Map<String, Object>> member_modify_action(@RequestBody MemberUpdateDto memberUpdateDto, HttpSession session) throws Exception {
+    public ResponseEntity<?> member_modify_action(@RequestBody MemberUpdateDto memberUpdateDto, HttpSession session) throws Exception {
         HashMap<String, Object> map = new HashMap<>();
         int result = 2;
         try {
@@ -226,7 +226,7 @@ public class MemberRestController {
 
     @LoginCheck
     @DeleteMapping(value = "/delete-action-rest", produces = "application/json;charset=UTF-8")
-    public ResponseEntity<Map<String, Object>> delete_action_rest(@RequestBody MemberLoginDto memberLoginDto, HttpSession session) throws Exception {
+    public ResponseEntity<?> delete_action_rest(@RequestBody MemberLoginDto memberLoginDto, HttpSession session) throws Exception {
         HashMap<String, Object> map = new HashMap<>();
         int result = 2;
         try {

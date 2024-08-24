@@ -21,13 +21,13 @@ public class MailController {
     private final OrderDao orderDao;
 
     @PostMapping("/emailauthentication")
-    public ResponseEntity<String> joinMailSend(@RequestParam String mail) {
+    public ResponseEntity<?> joinMailSend(@RequestParam String mail) {
         int number = mailService.joinSendMail(mail);
         return ResponseEntity.ok(String.valueOf(number));
     }
 
     @PostMapping("/findpassemailauthentication")
-    public ResponseEntity<Map<String, String>> findPassMailSend(@RequestParam String mail) throws Exception {
+    public ResponseEntity<?> findPassMailSend(@RequestParam String mail) throws Exception {
         String randomPass = mailService.findPassSendMail(mail);
         Map<String, String> map = new HashMap<>();
         map.put("newPass", randomPass);
@@ -35,7 +35,7 @@ public class MailController {
     }
 
     @PostMapping("/findidemailauthentication")
-    public ResponseEntity<Map<String, String>> findidMailSend(@RequestParam String mail) throws Exception {
+    public ResponseEntity<?> findidMailSend(@RequestParam String mail) throws Exception {
         String id = mailService.findIdSendMail(mail);
         Map<String, String> map = new HashMap<>();
         map.put("sendId", id);
@@ -43,7 +43,7 @@ public class MailController {
     }
 
     @PostMapping("/sendOrderIdemailauthentication")
-    public ResponseEntity<Map<String, String>> sendOrderIdMailSend(@RequestParam String mail, @RequestParam String orderId) throws Exception {
+    public ResponseEntity<?> sendOrderIdMailSend(@RequestParam String mail, @RequestParam String orderId) throws Exception {
         String id = mailService.findOrderIdSendMail(mail, orderId);
         Map<String, String> map = new HashMap<>();
         map.put("orderId", id);
