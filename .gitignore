@@ -38,7 +38,7 @@ out/
 .vscode/
 
 ## .properties files ##
-src/main/**/application-dev.properties
+src/main/**/application.properties
 src/main/**/envs.properties
 
 # Elastic Beanstalk Files
