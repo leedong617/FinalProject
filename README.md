@@ -82,7 +82,7 @@ KakaoProfile에서 가져온 이메일이 DB에 존재한다면 해당 이메일
 <details>
  
 ### ⚡순환참조
-개요 : Member REST API를 Swagger로 테스트 하던중 순환참조 에러가 발생하였다.<br>
+개요 : Member API를 Swagger로 테스트 하던중 순환참조 에러가 발생하였다.<br>
 원인 : JPA를 사용해 Entity간 1:N 양방향 맵핑이 되있고 Entity를 그대로 반환할 경우 무한 참조가 발생하여 StackOverFlow가 난다.<br>
 해결 방법 : 많은 방법들이 있었지만 DTO를 만들어 반환하는 방법을 채택했다. DTO는 필요한 데이터만 담기 때문에 순환참조를 애초에 예방할 수 있다.<br>
 
